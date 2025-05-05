@@ -6,9 +6,9 @@ on:
     branches:
       - main
     paths:
-      - 'localBreeds.json'
-      - 'fallbackBreeds.json'
-      - 'breedignore'
+      - "src/localBreeds.json"
+      - "src/fallbackBreeds.json"
+      - "src/breedignore"
 
 jobs:
   rebuild-cache:
