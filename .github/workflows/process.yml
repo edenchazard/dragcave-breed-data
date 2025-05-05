@@ -22,8 +22,11 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
+      - name: Start container
+        run: docker compose up breeds -d
+
       - name: Run cache download
-        run: docker compose up breeds && docker compose exec -T breeds sh -c "npm run process"
+        run: docker compose exec -T breeds sh -c "npm run process"
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
