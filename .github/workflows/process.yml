@@ -26,10 +26,10 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install deps
+      - name: Install bun dependencies
         run: bun install
 
-      - name: Run cache download
+      - name: Run processing script (formatting, cache downloads)
         run: bun run ./src/process.ts
 
       - uses: stefanzweifel/git-auto-commit-action@v5
