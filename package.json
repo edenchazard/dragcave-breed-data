@@ -5,8 +5,8 @@
   "private": true,
   "description": "Cache and breed data for lineage builder.",
   "scripts": {
-    "process": "./process-breeds/process.ts",
-    "download": "./process-breeds/download.ts"
+    "process": "./src/process.ts",
+    "download": "./src/download.ts"
   },
   "repository": {
     "type": "git",
