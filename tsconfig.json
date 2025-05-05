@@ -15,7 +15,8 @@
     "strict": true,
     "outDir": "/prod",
     "verbatimModuleSyntax": false,
-    "allowImportingTsExtensions": true
+    "allowImportingTsExtensions": true,
+    "noEmit": true
   },
   "exclude": ["node_modules/**", "coverage/**"]
 }
