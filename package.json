@@ -1,9 +1,32 @@
 {
   "name": "dragcave-breed-data",
   "version": "1.0.0",
-  "type": "module",
-  "private": true,
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edenchazard/dragcave-breed-data.git"
+  },
+  "dependencies": {
+    "node-html-parser": "^7.0.1",
+    "ofetch": "^1.4.1",
+    "sharp": "^0.34.1",
+    "typescript": "^5.8.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@types/bun": "latest",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.2",
+    "prettier": "^3.5.3",
+    "typescript-eslint": "^8.31.1"
+  },
+  "bugs": {
+    "url": "https://github.com/edenchazard/dragcave-breed-data/issues"
+  },
   "description": "Cache and breed data for lineage builder.",
+  "homepage": "https://github.com/edenchazard/dragcave-breed-data#readme",
+  "license": "ISC",
+  "private": true,
   "scripts": {
     "process": "src/process.ts",
     "download": "src/download.ts",
@@ -13,31 +36,5 @@
     "lint:fix": "bun run lint -- --fix",
     "ts:check": "tsc --noEmit"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/edenchazard/dragcave-breed-data.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/edenchazard/dragcave-breed-data/issues"
-  },
-  "homepage": "https://github.com/edenchazard/dragcave-breed-data#readme",
-  "dependencies": {
-    "node-html-parser": "^7.0.1",
-    "ofetch": "^1.4.1",
-    "sharp": "^0.34.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^9.26.0",
-    "@types/bun": "latest",
-    "eslint": "^9.26.0",
-    "eslint-config-prettier": "^10.1.2",
-    "prettier": "^3.5.3",
-    "tsc": "^2.0.4",
-    "typescript-eslint": "^8.31.1"
-  },
-  "peerDependencies": {
-    "typescript": "^5.8.3"
-  }
+  "type": "module"
 }

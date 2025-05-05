@@ -7,6 +7,7 @@
         "node-html-parser": "^7.0.1",
         "ofetch": "^1.4.1",
         "sharp": "^0.34.1",
+        "typescript": "^5.8.3",
       },
       "devDependencies": {
         "@eslint/js": "^9.26.0",
@@ -14,11 +15,7 @@
         "eslint": "^9.26.0",
         "eslint-config-prettier": "^10.1.2",
         "prettier": "^3.5.3",
-        "tsc": "^2.0.4",
         "typescript-eslint": "^8.31.1",
-      },
-      "peerDependencies": {
-        "typescript": "^5.8.3",
       },
     },
   },
@@ -458,8 +455,6 @@
     "toidentifier": ["toidentifier@1.0.1", "", {}, "sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA=="],
 
     "ts-api-utils": ["ts-api-utils@2.1.0", "", { "peerDependencies": { "typescript": ">=4.8.4" } }, "sha512-CUgTZL1irw8u29bzrOD/nH85jqyc74D6SshFgujOIA7osm2Rz7dYH77agkx7H4FBNxDq7Cjf+IjaX/8zwFW+ZQ=="],
-
-    "tsc": ["tsc@2.0.4", "", { "bin": { "tsc": "bin/tsc" } }, "sha512-fzoSieZI5KKJVBYGvwbVZs/J5za84f2lSTLPYf6AGiIf43tZ3GNrI1QzTLcjtyDDP4aLxd46RTZq1nQxe7+k5Q=="],
 
     "tslib": ["tslib@2.8.1", "", {}, "sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w=="],
 
