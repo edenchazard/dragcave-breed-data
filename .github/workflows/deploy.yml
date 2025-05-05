@@ -1,0 +1,30 @@
+name: Notify deployment of updated breed data
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'output/**'
+
+jobs:
+  rebuild-cache:
+    runs-on: ubuntu-latest
+    concurrency:
+      group: concurrency-group-${{ github.ref_name }}
+      cancel-in-progress: true
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_DEPLOYMENT_HOST }}
+          username: ${{ secrets.SSH_DEPLOYMENT_USERNAME }}
+          key: ${{ secrets.SSH_DEPLOYMENT_KEY }}
+          port: ${{ secrets.SSH_DEPLOYMENT_PORT }}
+          script: whoami
