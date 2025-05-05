@@ -1,10 +1,10 @@
 import { promises as fs } from "fs";
 import { setTimeout } from "timers/promises";
 import {
-  IgnoreFile,
-  IgnoreList,
-  PortraitSizing,
   tags,
+  type IgnoreFile,
+  type IgnoreList,
+  type PortraitSizing,
   type BreedEntry,
   type GenderOnly,
   type NewTag,

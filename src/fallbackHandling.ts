@@ -84,8 +84,11 @@ function getImages(json: FallbackBreedsJSON) {
   for (const breedName in json) {
     const breed = json[breedName];
 
-    if (breed.subentries) {
+    if (breed?.subentries) {
       for (const subentryName in breed.subentries) {
+        if (subentryName in breed.subentries === false) {
+          continue;
+        }
         images.push(...getSprites(breed.subentries[subentryName].sprites));
       }
     } else {

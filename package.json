@@ -6,7 +6,10 @@
   "description": "Cache and breed data for lineage builder.",
   "scripts": {
     "process": "src/process.ts",
-    "download": "src/download.ts"
+    "download": "src/download.ts",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "ts:check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,13 @@
   "dependencies": {
     "node-html-parser": "^7.0.1",
     "ofetch": "^1.4.1",
-    "sharp": "^0.34.1"
+    "sharp": "^0.34.1",
+    "tsc": "^2.0.4"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   }
 }

@@ -1,4 +1,4 @@
-name: rebuild-cache
+name: Rebuild breeds data [bot]
 
 on:
   pull_request:
@@ -13,6 +13,10 @@ on:
 jobs:
   rebuild-cache:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    concurrency:
+      group: concurrency-group-${{ github.ref_name }}
+      cancel-in-progress: true
 
     permissions:
       contents: write
@@ -49,4 +53,4 @@ jobs:
           commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
-          commit_message: "chore: download missing tiles and rebuild artifacts"
+          commit_message: "[bot] chore: download missing tiles and rebuild artifacts"
