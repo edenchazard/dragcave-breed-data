@@ -1,0 +1,10 @@
+node_modules
+coverage
+**/fallbacks.css
+**/sprites-36x48-*.css
+**/sprites-72x96-*.css
+**/breed-definitions.ts
+src/localBreeds.json
+src/fallbackBreeds.json
+package.json
+package-lock.json
