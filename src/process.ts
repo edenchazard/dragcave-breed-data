@@ -13,25 +13,25 @@
         3.1) sprites-72x96.css
             72x96 high definition sprite set.
 */
-import { promises as fs } from 'fs';
+import { promises as fs } from "fs";
 
-import { getFileAndDirName, prettyPrintJSONFile } from './utils.js';
-import { caches, ignoreFile } from './files';
+import { getFileAndDirName, prettyPrintJSONFile } from "./utils.js";
+import { caches, ignoreFile } from "./files";
 
 import {
   saveResolutionStylesheet,
   getBreedTable as localBreedTable,
   checkCache,
   type LocalBreedsJSON,
-} from './localHandling.js';
+} from "./localHandling.js";
 
 import {
   makeCSSStyleSheet,
   getBreedTable as fallbackBreedTable,
   type FallbackBreedsJSON,
-} from './fallbackHandling.js';
+} from "./fallbackHandling.js";
 
-import type { BreedEntry } from '../app/shared/types';
+import type { BreedEntry } from "../app/shared/types";
 
 const { __dirname } = getFileAndDirName();
 
@@ -72,31 +72,31 @@ function getBreedsTable() {
 async function prettyPrintFiles() {
   // prettify our json files
   await Promise.all([
-    prettyPrintJSONFile(__dirname + '/localBreeds.json'),
-    prettyPrintJSONFile(__dirname + '/fallbackBreeds.json'),
+    prettyPrintJSONFile(__dirname + "/localBreeds.json"),
+    prettyPrintJSONFile(__dirname + "/fallbackBreeds.json"),
   ]);
 
-  fallbackJSON = (await import('./fallbackBreeds.json'))
+  fallbackJSON = (await import("./fallbackBreeds.json"))
     .default as unknown as FallbackBreedsJSON;
-  localJSON = (await import('./localBreeds.json'))
+  localJSON = (await import("./localBreeds.json"))
     .default as unknown as LocalBreedsJSON;
 }
 
 async function main() {
   await prettyPrintFiles();
 
-  const definitionsFile = 'breed-definitions.ts';
+  const definitionsFile = "breed-definitions.ts";
   const breeds = getBreedsTable();
   const json = JSON.stringify(breeds);
   const localNumber = breeds.filter(
-    (breed) => breed.metaData.src === 'local',
+    (breed) => breed.metaData.src === "local"
   ).length;
   const fallbackNumber = breeds.filter(
-    (breed) => breed.metaData.src === 'dc',
+    (breed) => breed.metaData.src === "dc"
   ).length;
 
   console.log(
-    `Found ${breeds.length} total breed entries (${localNumber} local and ${fallbackNumber} fallbacks.)`,
+    `Found ${breeds.length} total breed entries (${localNumber} local and ${fallbackNumber} fallbacks.)`
   );
 
   await Promise.all(Object.values(caches).map((cache) => cache.tryAccess()));
@@ -106,7 +106,7 @@ async function main() {
 
   await saveResolutionStylesheet({
     locTiles: caches.cache36.settings.folder,
-    locCSSFile: './app/assets/tile-rendering/sprites-36x48',
+    locCSSFile: "./output/tile-rendering/sprites-36x48",
     sizing: { width: 36, height: 48 },
     injectFolder: caches.cache36.settings.inject,
   });
@@ -116,30 +116,30 @@ async function main() {
 
   await saveResolutionStylesheet({
     locTiles: caches.cache72.settings.folder,
-    locCSSFile: './app/assets/tile-rendering/sprites-72x96',
+    locCSSFile: "./output/tile-rendering/sprites-72x96",
     sizing: { width: 72, height: 96 },
     injectFolder: caches.cache72.settings.inject,
   });
 
   // make and save the definition file
   await fs.writeFile(
-    './app/shared/' + definitionsFile,
+    `./output/${definitionsFile}`,
     "import type { BreedEntry } from './types'; export default " +
       json +
-      ' as BreedEntry[];',
-    'utf8',
+      " as BreedEntry[];",
+    "utf8"
   );
 
-  console.log('Synced breed definitions.');
+  console.log("Synced breed definitions.");
 
   // make and save the fallbacks stylesheet
   await fs.writeFile(
-    './app/assets/tile-rendering/fallbacks.css',
+    "./output/tile-rendering/fallbacks.css",
     makeCSSStyleSheet(fallbackJSON),
-    'utf8',
+    "utf8"
   );
-  console.log('Saved fallbacks css.');
-  console.log('SCRIPT COMPLETE');
+  console.log("Saved fallbacks css.");
+  console.log("SCRIPT COMPLETE");
 }
 
 await main();

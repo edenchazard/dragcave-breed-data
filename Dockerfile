@@ -1,9 +1,4 @@
-ARG NODE_VERSION=lts-slim
-
-#####
-
-FROM node:${NODE_VERSION} AS build
-ENV NODE_ENV=development
+FROM node:lts-slim AS build 
 WORKDIR /app
 COPY package*.json ./
 RUN npm i

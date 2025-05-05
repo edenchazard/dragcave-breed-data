@@ -22,11 +22,11 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: Start container
-        run: docker compose up breeds -d
+      - name: Install deps
+        run: npm i
 
       - name: Run cache download
-        run: docker compose exec -T breeds sh -c "npm run process"
+        run: npm run process
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
