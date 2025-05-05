@@ -7,6 +7,7 @@
   "scripts": {
     "process": "src/process.ts",
     "download": "src/download.ts",
+    "fmt:check": "prettier . --check",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "ts:check": "tsc --noEmit"
@@ -28,7 +29,8 @@
     "tsc": "^2.0.4"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "prettier": "^3.5.3"
   },
   "peerDependencies": {
     "typescript": "^5"
