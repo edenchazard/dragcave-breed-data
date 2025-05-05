@@ -54,3 +54,4 @@ jobs:
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
           commit_message: '[bot] chore: download missing tiles and rebuild artifacts'
+          push_options: --force
