@@ -32,7 +32,7 @@ jobs:
         run: bun run lint
 
       - name: Run typescript checks
-        run: bun run ts:check
+        run: bunx ts:check
 
       - name: Run schema validation
         run: echo "TODO"
