@@ -27,4 +27,4 @@ jobs:
           username: ${{ secrets.SSH_DEPLOYMENT_USERNAME }}
           key: ${{ secrets.SSH_DEPLOYMENT_KEY }}
           port: ${{ secrets.SSH_DEPLOYMENT_PORT }}
-          script: whoami
+          script: cd ~/projects/lb6 && docker-compose up app -d --build
