@@ -26,5 +26,6 @@
     "noPropertyAccessFromIndexSignature": false,
 
     "resolveJsonModule": true
-  }
+  },
+  "exclude": ["output"]
 }
