@@ -1,6 +1,6 @@
 import { setTimeout } from 'timers/promises';
 
-import { caches } from './files';
+import { caches } from './files.ts';
 
 await (async function main() {
   // parse args for codes

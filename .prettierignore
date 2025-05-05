@@ -1,0 +1,7 @@
+node_modules
+coverage
+output
+src/localBreeds.json
+src/fallbackBreeds.json
+package.json
+bun.lock

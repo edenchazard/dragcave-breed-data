@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs';
-import type { PortraitCacheSettings } from './types';
+import type { PortraitCacheSettings } from './types.ts';
 import sharp from 'sharp';
 import { ofetch } from 'ofetch';
 import nodeHTMLParser from 'node-html-parser';

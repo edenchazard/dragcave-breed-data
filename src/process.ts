@@ -15,23 +15,23 @@
 */
 import { promises as fs } from 'fs';
 
-import { getFileAndDirName, prettyPrintJSONFile } from './utils.js';
-import { caches, ignoreFile } from './files';
+import { getFileAndDirName, prettyPrintJSONFile } from './utils.ts';
+import { caches, ignoreFile } from './files.ts';
 
 import {
   saveResolutionStylesheet,
   getBreedTable as localBreedTable,
   checkCache,
   type LocalBreedsJSON,
-} from './localHandling.js';
+} from './localHandling.ts';
 
 import {
   makeCSSStyleSheet,
   getBreedTable as fallbackBreedTable,
   type FallbackBreedsJSON,
-} from './fallbackHandling.js';
+} from './fallbackHandling.ts';
 
-import type { BreedEntry } from '../app/shared/types';
+import type { BreedEntry } from './types.ts';
 
 const { __dirname } = getFileAndDirName();
 
@@ -106,7 +106,7 @@ async function main() {
 
   await saveResolutionStylesheet({
     locTiles: caches.cache36.settings.folder,
-    locCSSFile: './app/assets/tile-rendering/sprites-36x48',
+    locCSSFile: './output/tile-rendering/sprites-36x48',
     sizing: { width: 36, height: 48 },
     injectFolder: caches.cache36.settings.inject,
   });
@@ -116,14 +116,14 @@ async function main() {
 
   await saveResolutionStylesheet({
     locTiles: caches.cache72.settings.folder,
-    locCSSFile: './app/assets/tile-rendering/sprites-72x96',
+    locCSSFile: './output/tile-rendering/sprites-72x96',
     sizing: { width: 72, height: 96 },
     injectFolder: caches.cache72.settings.inject,
   });
 
   // make and save the definition file
   await fs.writeFile(
-    './app/shared/' + definitionsFile,
+    `./output/${definitionsFile}`,
     "import type { BreedEntry } from './types'; export default " +
       json +
       ' as BreedEntry[];',
@@ -134,7 +134,7 @@ async function main() {
 
   // make and save the fallbacks stylesheet
   await fs.writeFile(
-    './app/assets/tile-rendering/fallbacks.css',
+    './output/tile-rendering/fallbacks.css',
     makeCSSStyleSheet(fallbackJSON),
     'utf8',
   );

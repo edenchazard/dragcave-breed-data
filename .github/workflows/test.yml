@@ -1,0 +1,38 @@
+name: Tests
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  code-quality-and-validation:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    concurrency:
+      group: test-${{ github.ref_name }}
+      cancel-in-progress: true
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install bun dependencies
+        run: bun install
+
+      - name: Run prettier checks
+        run: bun run fmt:check
+
+      - name: Run linting
+        run: bun run lint
+
+      - name: Run typescript checks
+        run: bun run ts:check
+
+      - name: Run schema validation
+        run: echo "TODO"

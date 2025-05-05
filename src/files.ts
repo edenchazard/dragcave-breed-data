@@ -1,5 +1,5 @@
-import { getFileAndDirName } from './utils.js';
-import { PortraitCache } from './portraitCache.js';
+import { getFileAndDirName } from './utils.ts';
+import { PortraitCache } from './portraitCache.ts';
 
 const { __dirname } = getFileAndDirName();
 

@@ -1,4 +1,4 @@
-name: rebuild-cache
+name: Rebuild breeds data [bot]
 
 on:
   pull_request:
@@ -6,25 +6,52 @@ on:
     branches:
       - main
     paths:
-      - 'localBreeds.json'
-      - 'fallbackBreeds.json'
-      - 'breedignore'
+      - 'src/localBreeds.json'
+      - 'src/fallbackBreeds.json'
+      - 'src/breedignore'
 
 jobs:
-  rebuild-cache:
+  rebuild:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.draft == false
+    concurrency:
+      group: rebuild-group-${{ github.ref_name }}
+      cancel-in-progress: true
 
     permissions:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           ref: ${{ github.head_ref }}
+          token: ${{ secrets.PAT }}
 
-      - name: Run cache download
-        run: docker compose exec -T breeds sh -c "npm run process"
-
-      - uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Import GPG key
+        id: import-gpg
+        uses: crazy-max/ghaction-import-gpg@v6
         with:
-          commit_message: Cache rebuild
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Install bun dependencies
+        run: bun install
+
+      - name: Run processing script (formatting, cache downloads)
+        run: bun run ./src/process.ts
+
+      - name: Commit and push changes from processing script
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_author: '${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>'
+          commit_user_name: ${{ steps.import-gpg.outputs.name }}
+          commit_user_email: ${{ steps.import-gpg.outputs.email }}
+          commit_message: '[bot] chore: download missing tiles and rebuild artifacts'
