@@ -5,10 +5,10 @@ on:
   push:
     branches:
       - main
-    #paths:
-    #- "src/localBreeds.json"
-    #- "src/fallbackBreeds.json"
-    #- "src/breedignore"
+    paths:
+      - "src/localBreeds.json"
+      - "src/fallbackBreeds.json"
+      - "src/breedignore"
 
 jobs:
   rebuild-cache:
@@ -49,3 +49,4 @@ jobs:
           commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
+          commit_message: "chore: download missing tiles and rebuild artifacts"
