@@ -8,7 +8,7 @@ on:
       - 'output/**'
 
 jobs:
-  rebuild-cache:
+  deploy:
     runs-on: ubuntu-latest
     concurrency:
       group: deploy
