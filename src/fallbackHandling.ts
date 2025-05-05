@@ -83,14 +83,14 @@ function getImages(json: FallbackBreedsJSON) {
   for (const breedName in json) {
     const breed = json[breedName];
 
-    if (breed?.subentries) {
+    if (typeof breed?.subentries !== 'undefined') {
       for (const subentryName in breed.subentries) {
-        if (subentryName in breed.subentries === false) {
+        if (breed.subentries[subentryName] === undefined) {
           continue;
         }
         images.push(...getSprites(breed.subentries[subentryName].sprites));
       }
-    } else {
+    } else if (typeof breed?.sprites !== 'undefined') {
       images.push(...getSprites(breed.sprites));
     }
   }
@@ -143,7 +143,7 @@ export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
   const breeds: BreedEntry[] = [];
 
   for (const breedName in json) {
-    const overallBreed = { ...json[breedName] };
+    const overallBreed = { ...json[breedName] } as Entry;
 
     const metaData: MetaData = {
       tags: overallBreed.tags,
@@ -154,6 +154,10 @@ export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
     if (overallBreed.subentries) {
       for (const subentryName in overallBreed.subentries) {
         const subentry = overallBreed.subentries[subentryName];
+
+        if (typeof subentry === 'undefined') {
+          continue;
+        }
 
         const entry = {
           name: `${breedName} ${subentryName}`,

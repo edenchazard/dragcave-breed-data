@@ -74,7 +74,7 @@ export function getBreedTable(json: LocalBreedsJSON) {
   };
 
   for (const breedName in json) {
-    const overallBreed = { ...json[breedName] };
+    const overallBreed = { ...json[breedName] } as Entry;
 
     const subentries: Extended['subentries'] = overallBreed.subentries ?? {
       __regular__: {
@@ -85,6 +85,11 @@ export function getBreedTable(json: LocalBreedsJSON) {
 
     for (const subentryName in subentries) {
       const subentry = subentries[subentryName];
+
+      if (typeof subentry === 'undefined') {
+        continue;
+      }
+
       const entryName =
         subentryName === '__regular__'
           ? breedName
@@ -206,9 +211,18 @@ async function makeCSS(tilePaths: string[]) {
   base64.forEach((tile) => {
     for (const key in split) {
       const range = key.split('');
-      const code = tile.code[0].toUpperCase();
+
+      if (typeof range[1] === 'undefined' || typeof range[0] === 'undefined') {
+        throw new Error(`Invalid range key: ${key}`);
+      }
+
+      const code = tile.code.charAt(0).toUpperCase();
 
       if (code >= range[0] && code <= range[1]) {
+        if (typeof split[key] === 'undefined') {
+          throw new Error(`Invalid split key: ${key}`);
+        }
+
         split[key].push(
           `.d-${tile.code}{background:url('data:image/webp;base64,${tile.base64}')}`,
         );
