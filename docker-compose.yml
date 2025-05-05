@@ -1,8 +1,0 @@
-services:
-  breeds:
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    command: sleep infinity
-    volumes:
-      - .:/app

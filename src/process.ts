@@ -15,23 +15,23 @@
 */
 import { promises as fs } from "fs";
 
-import { getFileAndDirName, prettyPrintJSONFile } from "./utils.js";
-import { caches, ignoreFile } from "./files";
+import { getFileAndDirName, prettyPrintJSONFile } from "./utils.ts";
+import { caches, ignoreFile } from "./files.ts";
 
 import {
   saveResolutionStylesheet,
   getBreedTable as localBreedTable,
   checkCache,
   type LocalBreedsJSON,
-} from "./localHandling.js";
+} from "./localHandling.ts";
 
 import {
   makeCSSStyleSheet,
   getBreedTable as fallbackBreedTable,
   type FallbackBreedsJSON,
-} from "./fallbackHandling.js";
+} from "./fallbackHandling.ts";
 
-import type { BreedEntry } from "../app/shared/types";
+import type { BreedEntry } from "./types.ts";
 
 const { __dirname } = getFileAndDirName();
 

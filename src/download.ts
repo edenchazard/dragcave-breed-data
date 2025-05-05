@@ -1,6 +1,6 @@
-import { setTimeout } from 'timers/promises';
+import { setTimeout } from "timers/promises";
 
-import { caches } from './files';
+import { caches } from "./files.ts";
 
 await (async function main() {
   // parse args for codes
@@ -28,8 +28,8 @@ await (async function main() {
           throttle++;
           await setTimeout(throttle * 1000);
           await cache.downloadPortrait(code);
-        }),
+        })
       );
-    }),
+    })
   );
 })();
