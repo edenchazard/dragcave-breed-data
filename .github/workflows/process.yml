@@ -23,7 +23,8 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-      - name: "Import GPG key"
+      - name: Import GPG key
+        id: import-gpg
         uses: crazy-max/ghaction-import-gpg@v6
         with:
           gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
@@ -42,7 +43,7 @@ jobs:
       - name: Run processing script (formatting, cache downloads)
         run: bun run ./src/process.ts
 
-      - name: "Commit and push changes from processing script"
+      - name: Commit and push changes from processing script
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
