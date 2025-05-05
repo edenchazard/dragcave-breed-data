@@ -1,0 +1,25 @@
+{
+  "name": "dragcave-breed-data",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Cache and breed data for lineage builder.",
+  "scripts": {
+    "process": "tsx ./process-breeds/process.ts",
+    "download": "tsx ./process-breeds/download.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edenchazard/dragcave-breed-data.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edenchazard/dragcave-breed-data/issues"
+  },
+  "homepage": "https://github.com/edenchazard/dragcave-breed-data#readme",
+  "devDependencies": {
+    "sharp": "^0.34.1",
+    "tsx": "^4.19.4"
+  }
+}
