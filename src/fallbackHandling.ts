@@ -9,9 +9,7 @@ import {
 
 type EntryName = string;
 
-export interface FallbackBreedsJSON {
-  [breedName: EntryName]: Entry;
-}
+export type FallbackBreedsJSON = Record<EntryName, Entry>;
 
 interface Base {
   dimorphism: boolean;
@@ -25,12 +23,13 @@ interface Simple extends Base {
 }
 
 interface Extended extends Base {
-  subentries: {
-    [name: EntryName]: {
+  subentries: Record<
+    EntryName,
+    {
       sprites: Sprites;
       tags?: NewTag[];
-    };
-  };
+    }
+  >;
   sprites?: never;
 }
 

@@ -13,9 +13,7 @@ import type { PortraitCache } from './portraitCache.ts';
 
 type EntryName = string;
 
-export interface LocalBreedsJSON {
-  [breedName: EntryName]: Entry;
-}
+export type LocalBreedsJSON = Record<EntryName, Entry>;
 
 interface Base {
   dimorphism: boolean;
@@ -29,12 +27,13 @@ interface Simple extends Base {
 }
 
 interface Extended extends Base {
-  subentries: {
-    [name: EntryName]: {
+  subentries: Record<
+    EntryName,
+    {
       sprites: Sprites;
       tags?: NewTag[];
-    };
-  };
+    }
+  >;
   sprites?: never;
 }
 

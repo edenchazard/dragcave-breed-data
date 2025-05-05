@@ -130,7 +130,7 @@ const miscTags = ['Has BSA', 'summonable', 'CB-only', 'salt'] as const;
 
 const releaseTags = ['regular', 'valentine', 'halloween', 'christmas'] as const;
 
-type TagFilterCollection = {
+interface TagFilterCollection {
   primaryElement: (typeof primaryElementTags)[number][];
   secondaryElement: (typeof secondaryElementTags)[number][];
   bodyType: (typeof bodyTypeTags)[number][];
@@ -138,7 +138,7 @@ type TagFilterCollection = {
   habitat: (typeof habitatTags)[number][];
   release: (typeof releaseTags)[number][];
   misc: (typeof miscTags)[number][];
-};
+}
 
 const tags = [
   ...bodyTypeTags,
