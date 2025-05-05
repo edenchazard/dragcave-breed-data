@@ -44,7 +44,7 @@ interface PartialLineage {
 
 type MaybePartialLineageWithMetadata = PartialLineage & Partial<DragonMetadata>;
 
-type DragonGender = "m" | "f";
+type DragonGender = 'm' | 'f';
 
 type DragonDisplay = 0 | 1;
 
@@ -63,7 +63,7 @@ interface MetaData {
   src: Sources;
 }
 
-type Sources = "local" | "dc" | "ghost";
+type Sources = 'local' | 'dc' | 'ghost';
 
 interface PortraitData {
   name: string;
@@ -78,57 +78,57 @@ interface LineageConfig {
 }
 
 const elements = [
-  "light",
-  "dark",
-  "magi",
-  "life",
-  "death",
-  "time",
-  "earth",
-  "lightning",
-  "air",
-  "water",
-  "fire",
-  "ice",
-  "neutral",
+  'light',
+  'dark',
+  'magi',
+  'life',
+  'death',
+  'time',
+  'earth',
+  'lightning',
+  'air',
+  'water',
+  'fire',
+  'ice',
+  'neutral',
 ] as const;
 
 const primaryElementTags = elements.map<`p:${(typeof elements)[number]}`>(
-  (tag) => `p:${tag}`
+  (tag) => `p:${tag}`,
 );
 
 const secondaryElementTags = elements.map<`s:${(typeof elements)[number]}`>(
-  (tag) => `s:${tag}`
+  (tag) => `s:${tag}`,
 );
 
-const bodyTypeTags = ["standard", "drake", "pygmy", "two-head"] as const;
+const bodyTypeTags = ['standard', 'drake', 'pygmy', 'two-head'] as const;
 
 const bodySubtypeTags = [
-  "amphiptere",
-  "wingless",
-  "western",
-  "eastern",
-  "leviathan",
-  "wyvern",
-  "lindwyrm",
-  "wyrm",
+  'amphiptere',
+  'wingless',
+  'western',
+  'eastern',
+  'leviathan',
+  'wyvern',
+  'lindwyrm',
+  'wyrm',
 ] as const;
 
 const habitatTags = [
-  "hybrid",
-  "alpine",
-  "coast",
-  "desert",
-  "forest",
-  "jungle",
-  "volcano",
-  "cave",
-  "all",
+  'hybrid',
+  'alpine',
+  'coast',
+  'desert',
+  'forest',
+  'jungle',
+  'volcano',
+  'cave',
+  'all',
 ] as const;
 
-const miscTags = ["Has BSA", "summonable", "CB-only", "salt"] as const;
+const miscTags = ['Has BSA', 'summonable', 'CB-only', 'salt'] as const;
 
-const releaseTags = ["regular", "valentine", "halloween", "christmas"] as const;
+const releaseTags = ['regular', 'valentine', 'halloween', 'christmas'] as const;
 
 type TagFilterCollection = {
   primaryElement: (typeof primaryElementTags)[number][];

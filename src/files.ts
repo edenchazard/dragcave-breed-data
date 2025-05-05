@@ -1,24 +1,24 @@
-import { getFileAndDirName } from "./utils.ts";
-import { PortraitCache } from "./portraitCache.ts";
+import { getFileAndDirName } from './utils.ts';
+import { PortraitCache } from './portraitCache.ts';
 
 const { __dirname } = getFileAndDirName();
 
-export const ignoreFile = __dirname + "/breedignore";
+export const ignoreFile = __dirname + '/breedignore';
 
 // Each of these has the cache folder we want to use, and the
 // device settings for use with puppeteer
 export const caches = {
   cache36: new PortraitCache({
-    folder: __dirname + "/caches/36/",
-    inject: __dirname + "/inject/36/",
+    folder: __dirname + '/caches/36/',
+    inject: __dirname + '/inject/36/',
     device: {
       dpr: 1,
     },
   }),
 
   cache72: new PortraitCache({
-    folder: __dirname + "/caches/72/",
-    inject: __dirname + "/inject/72/",
+    folder: __dirname + '/caches/72/',
+    inject: __dirname + '/inject/72/',
     device: {
       dpr: 2.75,
     },

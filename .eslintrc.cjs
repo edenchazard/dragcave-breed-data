@@ -2,6 +2,6 @@ module.exports = {
   env: {
     browser: true,
   },
-  extends: ["prettier"],
-  plugins: ["@typescript-eslint"],
+  extends: ['prettier'],
+  plugins: ['@typescript-eslint'],
 };

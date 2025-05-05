@@ -1,5 +1,5 @@
-import { promises as fs } from "fs";
-import { setTimeout } from "timers/promises";
+import { promises as fs } from 'fs';
+import { setTimeout } from 'timers/promises';
 import {
   tags,
   type IgnoreFile,
@@ -8,8 +8,8 @@ import {
   type BreedEntry,
   type GenderOnly,
   type NewTag,
-} from "./types.ts";
-import type { PortraitCache } from "./portraitCache.ts";
+} from './types.ts';
+import type { PortraitCache } from './portraitCache.ts';
 
 type EntryName = string;
 
@@ -48,14 +48,14 @@ export function getBreedTable(json: LocalBreedsJSON) {
   const createEntry = function (
     name: EntryName,
     overallBreed: Entry,
-    spriteData: Sprites
+    spriteData: Sprites,
   ) {
     const entry: BreedEntry = {
       name: name,
       genderOnly: overallBreed.genderOnly,
       metaData: {
         tags: overallBreed.tags,
-        src: "local",
+        src: 'local',
       },
     };
 
@@ -66,7 +66,7 @@ export function getBreedTable(json: LocalBreedsJSON) {
       if (!overallBreed.genderOnly) {
         entry.male = entry.female = spriteData[0];
       } else {
-        const gender = overallBreed.genderOnly == "m" ? "male" : "female";
+        const gender = overallBreed.genderOnly == 'm' ? 'male' : 'female';
         entry[gender] = spriteData[0];
       }
     }
@@ -77,7 +77,7 @@ export function getBreedTable(json: LocalBreedsJSON) {
   for (const breedName in json) {
     const overallBreed = { ...json[breedName] };
 
-    const subentries: Extended["subentries"] = overallBreed.subentries ?? {
+    const subentries: Extended['subentries'] = overallBreed.subentries ?? {
       __regular__: {
         sprites: overallBreed.sprites,
         tags: [],
@@ -87,7 +87,7 @@ export function getBreedTable(json: LocalBreedsJSON) {
     for (const subentryName in subentries) {
       const subentry = subentries[subentryName];
       const entryName =
-        subentryName === "__regular__"
+        subentryName === '__regular__'
           ? breedName
           : `${breedName} ${subentryName}`;
 
@@ -100,7 +100,7 @@ export function getBreedTable(json: LocalBreedsJSON) {
 
       // Sort them by preferred order.
       entry.metaData.tags = entry.metaData.tags.toSorted(
-        (a, b) => tags.indexOf(a) - tags.indexOf(b)
+        (a, b) => tags.indexOf(a) - tags.indexOf(b),
       );
 
       entries.push(entry);
@@ -115,13 +115,13 @@ async function getTileFullPaths(dir: string): Promise<string[]> {
 }
 
 async function getIgnoredBreeds(ignoreFile: IgnoreFile): Promise<IgnoreList> {
-  const content = (await fs.readFile(ignoreFile, { encoding: "utf8" })).trim();
+  const content = (await fs.readFile(ignoreFile, { encoding: 'utf8' })).trim();
   return (
     content
       // standardise line endings
-      .replace(/\r\n/g, "\n")
+      .replace(/\r\n/g, '\n')
       // split by line
-      .split("\n")
+      .split('\n')
       // trim whitespaces for each line
       .map((line) => line.trim())
       // filter out any line that isn't a code
@@ -132,7 +132,7 @@ async function getIgnoredBreeds(ignoreFile: IgnoreFile): Promise<IgnoreList> {
 export async function checkCache(
   json: LocalBreedsJSON,
   cache: PortraitCache,
-  ignoreFile: IgnoreFile | null = null
+  ignoreFile: IgnoreFile | null = null,
 ): Promise<void> {
   // get a list of codes we want to check our specified cache for
   // while ignoring any on our ignore file
@@ -156,7 +156,7 @@ export async function checkCache(
 
   // remove ignored images
   const ignored = ignoreFile !== null ? await getIgnoredBreeds(ignoreFile) : [];
-  console.log(`... IGNORING: ${ignored.join(", ")}`);
+  console.log(`... IGNORING: ${ignored.join(', ')}`);
 
   const codes = getCodes(getBreedTable(json), ignored);
 
@@ -177,7 +177,7 @@ export async function checkCache(
         await setTimeout(throttle * 1000);
         await cache.downloadPortrait(code);
       }
-    })
+    }),
   );
 
   console.log(`... Cache ${cache.settings.folder} OK.`);
@@ -190,13 +190,13 @@ async function makeCSS(tilePaths: string[]) {
     tilePaths.map(async (tile) => {
       // we just want the code, so we have to parse it from the filepath
       // and exclude the extension
-      const code = tile.slice(tile.lastIndexOf("/") + 1, tile.lastIndexOf("."));
-      return { code, base64: await fs.readFile(tile, { encoding: "base64" }) };
-    })
+      const code = tile.slice(tile.lastIndexOf('/') + 1, tile.lastIndexOf('.'));
+      return { code, base64: await fs.readFile(tile, { encoding: 'base64' }) };
+    }),
   );
 
   const split: Record<string, string[]> = {
-    "09": [],
+    '09': [],
     AE: [],
     FJ: [],
     KO: [],
@@ -206,19 +206,19 @@ async function makeCSS(tilePaths: string[]) {
 
   base64.forEach((tile) => {
     for (const key in split) {
-      const range = key.split("");
+      const range = key.split('');
       const code = tile.code[0].toUpperCase();
 
       if (code >= range[0] && code <= range[1]) {
         split[key].push(
-          `.d-${tile.code}{background:url('data:image/webp;base64,${tile.base64}')}`
+          `.d-${tile.code}{background:url('data:image/webp;base64,${tile.base64}')}`,
         );
         break;
       }
     }
   });
 
-  return Object.values(split).map((tiles) => tiles.join(""));
+  return Object.values(split).map((tiles) => tiles.join(''));
 }
 
 // if we want to 'inject' additional tiles outside of the cache,
@@ -244,17 +244,15 @@ export async function saveResolutionStylesheet({
 
   if (injectFolder !== null) {
     console.log(
-      `... Found ${injectedTiles.length} injected sprites in folder ${injectFolder}`
+      `... Found ${injectedTiles.length} injected sprites in folder ${injectFolder}`,
     );
   }
 
   await Promise.all(
-    (
-      await makeCSS([...tiles, ...injectedTiles])
-    ).map(async (stylesheet, i) => {
+    (await makeCSS([...tiles, ...injectedTiles])).map(async (stylesheet, i) => {
       const file = `${locCSSFile}-${i}.css`;
-      await fs.writeFile(file, stylesheet, "utf8");
-    })
+      await fs.writeFile(file, stylesheet, 'utf8');
+    }),
   );
 
   console.log(`... Saved css stylesheets to ${locCSSFile}`);

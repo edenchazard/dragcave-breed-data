@@ -6,9 +6,9 @@ on:
     branches:
       - main
     paths:
-      - "src/localBreeds.json"
-      - "src/fallbackBreeds.json"
-      - "src/breedignore"
+      - 'src/localBreeds.json'
+      - 'src/fallbackBreeds.json'
+      - 'src/breedignore'
 
 jobs:
   rebuild-cache:
@@ -50,7 +50,7 @@ jobs:
       - name: Commit and push changes from processing script
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
+          commit_author: '${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>'
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
-          commit_message: "[bot] chore: download missing tiles and rebuild artifacts"
+          commit_message: '[bot] chore: download missing tiles and rebuild artifacts'

@@ -1,6 +1,6 @@
-import path from "path";
-import { fileURLToPath } from "url";
-import { promises as fs } from "fs";
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { promises as fs } from 'fs';
 
 // Node modules don't support __dirname and __filename
 // This will provide that functionality.
@@ -14,11 +14,11 @@ export function getFileAndDirName(): { __filename: string; __dirname: string } {
 // all keys alphabetically and formats them to look nicer.
 // it's good for our git diffs.
 function isRecord(what: unknown): what is Record<string, unknown> {
-  return !Array.isArray(what) && typeof what === "object" && what !== null;
+  return !Array.isArray(what) && typeof what === 'object' && what !== null;
 }
 
 export async function prettyPrintJSONFile(
-  jsonFileLocation: string
+  jsonFileLocation: string,
 ): Promise<void> {
   const objectKeySort = <T>(what: T): T => {
     // don't sort arrays or primitive values
@@ -38,9 +38,9 @@ export async function prettyPrintJSONFile(
   // https://stackoverflow.com/a/54931396
   const prettyPrintArray = (
     json: Record<string, unknown>,
-    indent = 2
+    indent = 2,
   ): string => {
-    if (typeof json === "string") {
+    if (typeof json === 'string') {
       json = JSON.parse(json);
     }
     const output = JSON.stringify(
@@ -49,26 +49,26 @@ export async function prettyPrintJSONFile(
         if (v instanceof Array) return JSON.stringify(v);
         return v;
       },
-      indent
+      indent,
     )
-      .replace(/\\/g, "")
-      .replace(/"\[/g, "[")
-      .replace(/\]"/g, "]")
-      .replace(/"\{/g, "{")
-      .replace(/\}"/g, "}");
+      .replace(/\\/g, '')
+      .replace(/"\[/g, '[')
+      .replace(/\]"/g, ']')
+      .replace(/"\{/g, '{')
+      .replace(/\}"/g, '}');
 
     return output;
   };
 
   // Fetch the file, then sort the keys, and then prettify it before
   // overwriting it.
-  const input = await fs.readFile(jsonFileLocation, { encoding: "utf8" });
+  const input = await fs.readFile(jsonFileLocation, { encoding: 'utf8' });
   const pretty = prettyPrintArray(objectKeySort(JSON.parse(input)));
   await fs.writeFile(jsonFileLocation, pretty);
   console.log(`Prettified ${jsonFileLocation}`);
 }
 export function chunkArray<T>(arr: T[], size: number) {
   return Array.from({ length: Math.ceil(arr.length / size) }, (_, i) =>
-    arr.slice(i * size, i * size + size)
+    arr.slice(i * size, i * size + size),
   );
 }

@@ -5,7 +5,7 @@ import {
   type DragonGender,
   type NewTag,
   tags,
-} from "./types";
+} from './types';
 
 type EntryName = string;
 
@@ -56,9 +56,9 @@ function getImages(json: FallbackBreedsJSON) {
    */
   const getDataForSprite = (
     spriteArray: Sprites,
-    gender: DragonGender = "m"
+    gender: DragonGender = 'm',
   ): FallbackImage => {
-    const offset = gender === "m" ? 0 : 4;
+    const offset = gender === 'm' ? 0 : 4;
 
     return {
       code: spriteArray[offset] as string,
@@ -71,8 +71,8 @@ function getImages(json: FallbackBreedsJSON) {
   const getSprites = (spriteArray: Sprites) => {
     if (isDimorphic(spriteArray)) {
       return [
-        getDataForSprite(spriteArray, "m"),
-        getDataForSprite(spriteArray, "f"),
+        getDataForSprite(spriteArray, 'm'),
+        getDataForSprite(spriteArray, 'f'),
       ];
     } else {
       return [getDataForSprite(spriteArray)];
@@ -104,21 +104,21 @@ export function makeCSSStyleSheet(json: FallbackBreedsJSON) {
     const attributes = (
       `left:${left}px;` +
       `top:${top}px;` +
-      (height !== null ? `height:${height}px;` : "")
+      (height !== null ? `height:${height}px;` : '')
     ).trim();
 
     return `.d-${code}{` + attributes + `}`;
   };
 
-  return getImages(json).map(makeClass).join("");
+  return getImages(json).map(makeClass).join('');
 }
 
 export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
   const getGenderProperties = (
     spriteArray: Sprites,
-    genderOnly: GenderOnly
+    genderOnly: GenderOnly,
   ) => {
-    const entry: Pick<BreedEntry, "female" | "male"> = {},
+    const entry: Pick<BreedEntry, 'female' | 'male'> = {},
       dimorphic = isDimorphic(spriteArray);
 
     if (dimorphic) {
@@ -132,7 +132,7 @@ export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
         entry.male = code;
         entry.female = code;
       } else {
-        const gender = genderOnly == "m" ? "male" : "female";
+        const gender = genderOnly == 'm' ? 'male' : 'female';
         entry[gender] = code;
       }
     }
@@ -148,7 +148,7 @@ export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
 
     const metaData: MetaData = {
       tags: overallBreed.tags,
-      src: "dc",
+      src: 'dc',
     };
 
     // determine if this breed has alts
@@ -170,7 +170,7 @@ export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
 
         // Sort them by preferred order.
         entry.metaData.tags = entry.metaData.tags.toSorted(
-          (a: NewTag, b: NewTag) => tags.indexOf(a) - tags.indexOf(b)
+          (a: NewTag, b: NewTag) => tags.indexOf(a) - tags.indexOf(b),
         );
 
         breeds.push(entry);

@@ -7,6 +7,7 @@
   "scripts": {
     "process": "src/process.ts",
     "download": "src/download.ts",
+    "fmt": "prettier --write .",
     "fmt:check": "prettier . --check",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
