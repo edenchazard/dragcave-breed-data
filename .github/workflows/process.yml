@@ -5,10 +5,10 @@ on:
   push:
     branches:
       - main
-    #paths:
-    #- "src/localBreeds.json"
-    #- "src/fallbackBreeds.json"
-    #- "src/breedignore"
+    paths:
+      - "src/localBreeds.json"
+      - "src/fallbackBreeds.json"
+      - "src/breedignore"
 
 jobs:
   rebuild-cache:
