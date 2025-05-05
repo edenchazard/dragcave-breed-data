@@ -11,7 +11,7 @@ jobs:
   rebuild-cache:
     runs-on: ubuntu-latest
     concurrency:
-      group: concurrency-group-${{ github.ref_name }}
+      group: deploy
       cancel-in-progress: true
 
     steps:
