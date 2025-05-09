@@ -2,6 +2,12 @@ name: Rebuild breeds data [bot]
 
 on:
   pull_request:
+    branches:
+      - main
+    paths:
+      - 'src/localBreeds.json'
+      - 'src/fallbackBreeds.json'
+      - 'src/breedignore'
   push:
     branches:
       - main
