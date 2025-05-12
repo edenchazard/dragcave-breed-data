@@ -144,7 +144,7 @@
     "genderOnly": false,
     "releaseDate": "2020-05-21",
     "sprites": ["rbsCL",0,-1,48],
-    "tags": ["eastern","air","alpine","regular"]
+    "tags": ["standard","eastern","air","alpine","regular"]
   },
   "Coastal Waverunner": {
     "genderOnly": false,
