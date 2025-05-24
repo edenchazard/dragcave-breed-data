@@ -18,6 +18,6 @@ The bot will automatically:
 
 To merge your changes to main, you must await a review from anyone in the [CODEOWNERS file](https://github.com/edenchazard/dragcave-breed-data/blob/main/.github/CODEOWNERS). All checks must pass and your commits must be signed. (Doing this from the web interface will ensure your commits are signed.)
 
-Once you have approval, you're free to merge without obstruction.
+Once you have approval, you're free to merge without obstruction. No further action is needed after merging.
 
-After successfully merging, the deployment will begin. Your changes will be live on Lineage Builder within 5 minutes. You don't need to do anything further. Thanks for contributing!
+Lineage Builder will update shortly after I add a new version tag for it. This is a manual action and happens when I have time for it. Thanks for contributing!
