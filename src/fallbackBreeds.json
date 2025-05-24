@@ -244,12 +244,6 @@
     "sprites": ["Png8A",0,-1,48,"uUYCh",-6,-1,48],
     "tags": ["standard","wyvern","fire","volcano","regular"]
   },
-  "Ouhou Wyvern": {
-    "genderOnly": false,
-    "releaseDate": "2025-05-21",
-    "sprites": ["Tekdh",-14,-1,47],
-    "tags": ["standard", "wyvern", "regular", "forest"]
-  },
   "Fanalea": {
     "genderOnly": false,
     "releaseDate": "2022-05-21",
@@ -524,6 +518,12 @@
     "releaseDate": "2021-07-25",
     "sprites": ["7DY50",-14,-1,47.5,"IRESi",-7,-1,48],
     "tags": ["standard","wyrm","light","alpine","coast","forest","jungle","regular"]
+  },
+  "Ouhou Wyvern": {
+    "genderOnly": false,
+    "releaseDate": "2025-05-21",
+    "sprites": ["Tekdh",-14,-1,47],
+    "tags": ["standard","wyvern","regular","forest"]
   },
   "Pargulus Pygmy": {
     "genderOnly": false,

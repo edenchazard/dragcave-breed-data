@@ -183,13 +183,6 @@
     "sprites": ["yukAh","lNIXS"],
     "tags": ["standard","leviathan","p:earth","s:death","desert","regular"]
   },
-  "Gloomstalker Pygmy": {
-    "dimorphism": true,
-    "genderOnly": false,
-    "releaseDate": "2025-05-21",
-    "sprites": ["9a2DL","rSibr"],
-    "tags": ["pygmy","regular","jungle"]
-  },
   "Arsani": {
     "dimorphism": false,
     "genderOnly": "f",
@@ -204,26 +197,12 @@
     },
     "tags": ["standard","western","magi","cave","valentine"]
   },
-  "Phantasma": {
-    "genderOnly": false,
-    "dimorphism": false,
-    "releaseDate": "2025-05-21",
-    "sprites": ["mPFsa"],
-    "tags": ["standard", "alpine", "regular"]
-  },
   "Ash": {
     "dimorphism": false,
     "genderOnly": false,
     "releaseDate": "2018-08-26",
     "sprites": ["jFX3Q"],
     "tags": ["standard","wingless","earth","forest","volcano","regular"]
-  },
-  "Luna": {
-    "dimorphism": false,
-    "genderOnly": false,
-    "releaseDate": "2025-05-21",
-    "sprites": ["5Kms3"],
-    "tags": ["standard","desert","regular"]
   },
   "Astrael": {
     "dimorphism": false,
@@ -441,26 +420,6 @@
       }
     },
     "tags": ["standard","western","dark","cave","halloween"]
-  },
-  "Impish Pygmy": {
-    "dimorphism": false,
-    "genderOnly": false,
-    "releaseDate": "2025-05-21",
-    "subentries": {
-      "Mogwai": {
-        "sprites": ["gtBIH"]
-      },
-      "Green": {
-        "sprites": ["1Lh1A"]
-      },
-      "Brown": {
-        "sprites": ["5OCJa"]
-      },
-      "Black": {
-        "sprites": ["UZ18m" ]
-      }
-    },
-    "tags": ["pygmy","regular", "coast"]
   },
   "Celestial": {
     "dimorphism": true,
@@ -843,6 +802,13 @@
     "sprites": ["VqdZ6","0v08H"],
     "tags": ["drake","coast","regular"]
   },
+  "Gloomstalker Pygmy": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2025-05-21",
+    "sprites": ["9a2DL","rSibr"],
+    "tags": ["pygmy","regular","jungle"]
+  },
   "Glystere Wyrm": {
     "dimorphism": false,
     "genderOnly": "m",
@@ -1083,6 +1049,26 @@
     "sprites": ["oXtku"],
     "tags": ["standard","amphiptere","water","coast","regular"]
   },
+  "Impish Pygmy": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-05-21",
+    "subentries": {
+      "Black": {
+        "sprites": ["UZ18m"]
+      },
+      "Brown": {
+        "sprites": ["5OCJa"]
+      },
+      "Green": {
+        "sprites": ["1Lh1A"]
+      },
+      "Mogwai": {
+        "sprites": ["gtBIH"]
+      }
+    },
+    "tags": ["pygmy","regular","coast"]
+  },
   "Incense": {
     "dimorphism": true,
     "genderOnly": false,
@@ -1238,6 +1224,13 @@
     "releaseDate": "2019-07-21",
     "sprites": ["NO0i0","BmFLn"],
     "tags": ["standard","wyvern","fire","forest","regular"]
+  },
+  "Luna": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-05-21",
+    "sprites": ["5Kms3"],
+    "tags": ["standard","desert","regular"]
   },
   "Lunar Herald": {
     "dimorphism": false,
@@ -1491,6 +1484,13 @@
     "releaseDate": "2023-08-27",
     "sprites": ["qgX9o"],
     "tags": ["standard","western","neutral","coast","desert","forest","regular"]
+  },
+  "Phantasma": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-05-21",
+    "sprites": ["mPFsa"],
+    "tags": ["standard","alpine","regular"]
   },
   "Pillow": {
     "dimorphism": true,
