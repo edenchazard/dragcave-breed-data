@@ -722,7 +722,7 @@
     "genderOnly": false,
     "releaseDate": "2022-05-21",
     "sprites": ["KVM4T"],
-    "tags": ["Adventure","pygmy","wingless","desert","regular","Has BSA"]
+    "tags": ["pygmy","wingless","desert","regular","Has BSA"]
   },
   "Galvanic Wyvern": {
     "dimorphism": false,
