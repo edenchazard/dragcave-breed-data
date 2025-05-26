@@ -523,7 +523,7 @@
     "genderOnly": false,
     "releaseDate": "2025-05-21",
     "sprites": ["Tekdh",-14,-1,47],
-    "tags": ["standard","wyvern","regular","forest"]
+    "tags": ["standard","wyvern","neutral","regular","forest"]
   },
   "Pargulus Pygmy": {
     "genderOnly": false,
