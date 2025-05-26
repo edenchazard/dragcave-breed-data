@@ -807,7 +807,7 @@
     "genderOnly": false,
     "releaseDate": "2025-05-21",
     "sprites": ["9a2DL","rSibr"],
-    "tags": ["pygmy","regular","jungle"]
+    "tags": ["pygmy","wyvern","death","regular","jungle"]
   },
   "Glystere Wyrm": {
     "dimorphism": false,
@@ -1067,7 +1067,7 @@
         "sprites": ["gtBIH"]
       }
     },
-    "tags": ["pygmy","regular","coast"]
+    "tags": ["pygmy","wingless","dark","regular","coast"]
   },
   "Incense": {
     "dimorphism": true,
@@ -1230,7 +1230,7 @@
     "genderOnly": false,
     "releaseDate": "2025-05-21",
     "sprites": ["5Kms3"],
-    "tags": ["standard","desert","regular"]
+    "tags": ["standard","western","neutral","desert","regular"]
   },
   "Lunar Herald": {
     "dimorphism": false,
@@ -1490,7 +1490,7 @@
     "genderOnly": false,
     "releaseDate": "2025-05-21",
     "sprites": ["mPFsa"],
-    "tags": ["standard","alpine","regular"]
+    "tags": ["standard","western","p:dark","s:magi","alpine","regular"]
   },
   "Pillow": {
     "dimorphism": true,
