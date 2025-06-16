@@ -55,7 +55,7 @@ jobs:
         run: bun run ./src/process.ts
 
       - name: Commit and push changes from processing script
-        uses: stefanzweifel/git-auto-commit-action@v5
+        uses: stefanzweifel/git-auto-commit-action@v6
         with:
           commit_author: '${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>'
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
