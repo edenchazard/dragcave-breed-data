@@ -986,6 +986,13 @@
     "sprites": ["TIOUK"],
     "tags": ["standard","western","p:dark","s:death","coast","regular","Has BSA"]
   },
+  "Lunate Wyvern":{
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-06-29",
+    "sprites": ["pJ3lG"],
+    "tags": ["standard","wyvern","alpine","forest"]
+  },
   "Hooktalon": {
     "dimorphism": true,
     "genderOnly": false,
