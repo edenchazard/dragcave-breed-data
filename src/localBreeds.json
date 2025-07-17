@@ -323,7 +323,7 @@
     "genderOnly": false,
     "releaseDate": "2016-07-10",
     "sprites": ["sHE0e"],
-    "tags": ["eastern","lightning","alpine","forest","regular","Has BSA"]
+    "tags": ["standard","eastern","lightning","alpine","forest","regular","Has BSA"]
   },
   "Boreal": {
     "dimorphism": false,
