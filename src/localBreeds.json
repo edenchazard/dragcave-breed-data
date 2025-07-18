@@ -323,7 +323,7 @@
     "genderOnly": false,
     "releaseDate": "2016-07-10",
     "sprites": ["sHE0e"],
-    "tags": ["standard","eastern","lightning","alpine","forest","regular","Has BSA"]
+    "tags": ["eastern","lightning","alpine","forest","regular","Has BSA"]
   },
   "Boreal": {
     "dimorphism": false,
@@ -475,7 +475,7 @@
   "Crypt": {
     "dimorphism": true,
     "genderOnly": false,
-    "releaseDate": "2022-10-30",
+    "releaseDate": "2022-10-31",
     "subentries": {
       "Salt Odeen": {
         "sprites": ["GtvMN","iyKgt"],
@@ -1257,7 +1257,7 @@
     "genderOnly": false,
     "releaseDate": "2025-06-29",
     "sprites": ["pJ3lG"],
-    "tags": ["standard","wyvern","p:life","s:magi","alpine","forest"]
+    "tags": ["standard","wyvern","alpine","forest"]
   },
   "Magelight Pygmy Wyvern": {
     "dimorphism": true,
