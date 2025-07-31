@@ -681,6 +681,13 @@
     },
     "tags": ["standard","western","fire","volcano","regular"]
   },
+  "Flameback": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2025-07-27",
+    "sprites": ["AffFN","U2hFb"],
+    "tags": ["standard","desert","volcano"]
+  },
   "Flare-Tail Pygmy": {
     "dimorphism": false,
     "genderOnly": false,
@@ -1293,6 +1300,13 @@
     "releaseDate": "2006-05-21",
     "sprites": ["rnTk"],
     "tags": ["standard","wingless","neutral","alpine","coast","forest","jungle","volcano","regular"]
+  },
+  "Missinic": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-07-27",
+    "sprites": ["pJ3lG"],
+    "tags": ["standard","coast"]
   },
   "Mistlet Pygmy": {
     "dimorphism": true,
