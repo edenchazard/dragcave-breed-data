@@ -686,7 +686,7 @@
     "genderOnly": false,
     "releaseDate": "2025-07-27",
     "sprites": ["AffFN","U2hFb"],
-    "tags": ["standard","desert","volcano"]
+    "tags": ["standard","western","p:fire","s:air","desert","volcano"]
   },
   "Flare-Tail Pygmy": {
     "dimorphism": false,
@@ -1306,7 +1306,7 @@
     "genderOnly": false,
     "releaseDate": "2025-07-27",
     "sprites": ["HeVJe"],
-    "tags": ["standard","coast"]
+    "tags": ["standard","amphiptere","lightning","coast"]
   },
   "Mistlet Pygmy": {
     "dimorphism": true,
