@@ -1334,6 +1334,13 @@
     },
     "tags": ["standard","western","life","cave","christmas"]
   },
+  "Miufu": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-08-31",
+    "sprites": ["c7X7A"],
+    "tags": ["two-head","forest","jungle"]
+  },
   "Monarch": {
     "dimorphism": true,
     "genderOnly": false,
