@@ -102,7 +102,12 @@ export function getBreedTable(json: LocalBreedsJSON) {
       // Use subentry releaseDate if present, otherwise use overallBreed releaseDate
       const releaseDate = subentry.releaseDate ?? overallBreed.releaseDate;
 
-      const entry = createEntry(entryName, overallBreed, subentry.sprites, releaseDate);
+      const entry = createEntry(
+        entryName,
+        overallBreed,
+        subentry.sprites,
+        releaseDate,
+      );
 
       // Append any subentry tags to the overall breed tags.
       if ((subentry.tags ?? []).length > 0) {
