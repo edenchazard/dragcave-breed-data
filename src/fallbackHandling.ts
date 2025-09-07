@@ -12,9 +12,10 @@ type EntryName = string;
 export type FallbackBreedsJSON = Record<EntryName, Entry>;
 
 interface Base {
-  dimorphism: boolean;
+  dimorphism?: boolean;
   genderOnly: GenderOnly;
   tags: NewTag[];
+  releaseDate: `${string}-${string}-${string}`;
 }
 
 interface Simple extends Base {
@@ -28,6 +29,7 @@ interface Extended extends Base {
     {
       sprites: Sprites;
       tags?: NewTag[];
+      releaseDate?: `${string}-${string}-${string}`;
     }
   >;
   sprites?: never;
@@ -164,6 +166,7 @@ export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
           ...getGenderProperties(subentry.sprites, overallBreed.genderOnly),
           genderOnly: overallBreed.genderOnly,
           metaData: JSON.parse(JSON.stringify(metaData)),
+          releaseDate: subentry.releaseDate ?? overallBreed.releaseDate,
         };
 
         // Append any subentry tags to the overall breed tags.
@@ -185,6 +188,7 @@ export function getBreedTable(json: FallbackBreedsJSON): BreedEntry[] {
         ...getGenderProperties(spriteArray, overallBreed.genderOnly),
         genderOnly: overallBreed.genderOnly,
         metaData,
+        releaseDate: overallBreed.releaseDate,
       });
     }
   }

@@ -19,6 +19,7 @@ interface Base {
   dimorphism: boolean;
   genderOnly: GenderOnly;
   tags: NewTag[];
+  releaseDate: `${string}-${string}-${string}`;
 }
 
 interface Simple extends Base {
@@ -32,6 +33,7 @@ interface Extended extends Base {
     {
       sprites: Sprites;
       tags?: NewTag[];
+      releaseDate?: `${string}-${string}-${string}`;
     }
   >;
   sprites?: never;
@@ -48,6 +50,7 @@ export function getBreedTable(json: LocalBreedsJSON) {
     name: EntryName,
     overallBreed: Entry,
     spriteData: Sprites,
+    releaseDate: `${string}-${string}-${string}`,
   ) {
     const entry: BreedEntry = {
       name: name,
@@ -56,6 +59,7 @@ export function getBreedTable(json: LocalBreedsJSON) {
         tags: overallBreed.tags,
         src: 'local',
       },
+      releaseDate: releaseDate,
     };
 
     if (overallBreed.dimorphism) {
@@ -95,7 +99,15 @@ export function getBreedTable(json: LocalBreedsJSON) {
           ? breedName
           : `${breedName} ${subentryName}`;
 
-      const entry = createEntry(entryName, overallBreed, subentry.sprites);
+      // Use subentry releaseDate if present, otherwise use overallBreed releaseDate
+      const releaseDate = subentry.releaseDate ?? overallBreed.releaseDate;
+
+      const entry = createEntry(
+        entryName,
+        overallBreed,
+        subentry.sprites,
+        releaseDate,
+      );
 
       // Append any subentry tags to the overall breed tags.
       if ((subentry.tags ?? []).length > 0) {
