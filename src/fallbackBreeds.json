@@ -422,6 +422,7 @@
   },
   "Magi": {
     "genderOnly": false,
+    "releaseDate": "2006-06-01",
     "sprites": ["CSJeS",-36,-1,48],
     "tags": ["standard","western","magi","all","regular","Has BSA"]
   },
@@ -758,6 +759,7 @@
   },
   "Storm-Rider": {
     "genderOnly": false,
+    "releaseDate": "2016-07-10",
     "sprites": ["Vqd62",0,-1,48],
     "tags": ["standard","western","lightning","hybrid","regular"]
   },
