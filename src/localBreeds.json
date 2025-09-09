@@ -1339,7 +1339,7 @@
     "genderOnly": false,
     "releaseDate": "2025-08-31",
     "sprites": ["c7X7A"],
-    "tags": ["two-head","forest","jungle"]
+    "tags": ["two-head","eastern","life","forest","jungle"]
   },
   "Monarch": {
     "dimorphism": true,
@@ -2154,6 +2154,7 @@
   "Tombstone": {
     "dimorphism": false,
     "genderOnly": false,
+    "releaseDate": "2014-11-18",
     "subentries": {
       "Alpine": {
         "sprites": ["VNvVH"],
