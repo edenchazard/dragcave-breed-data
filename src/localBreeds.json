@@ -686,7 +686,7 @@
     "genderOnly": false,
     "releaseDate": "2025-07-27",
     "sprites": ["AffFN","U2hFb"],
-    "tags": ["standard","western","p:fire","s:air","desert","volcano"]
+    "tags": ["standard","western","p:fire","s:air","desert","volcano","regular"]
   },
   "Flare-Tail Pygmy": {
     "dimorphism": false,
@@ -1264,7 +1264,7 @@
     "genderOnly": false,
     "releaseDate": "2025-06-29",
     "sprites": ["pJ3lG"],
-    "tags": ["standard","wyvern","p:life","s:magi","alpine","forest"]
+    "tags": ["standard","wyvern","p:life","s:magi","alpine","forest","regular"]
   },
   "Magelight Pygmy Wyvern": {
     "dimorphism": true,
@@ -1339,7 +1339,7 @@
     "genderOnly": false,
     "releaseDate": "2025-08-31",
     "sprites": ["c7X7A"],
-    "tags": ["two-head","forest","jungle"]
+    "tags": ["two-head","eastern","life","forest","jungle","regular"]
   },
   "Monarch": {
     "dimorphism": true,
@@ -2154,6 +2154,7 @@
   "Tombstone": {
     "dimorphism": false,
     "genderOnly": false,
+    "releaseDate": "2014-11-18",
     "subentries": {
       "Alpine": {
         "sprites": ["VNvVH"],
@@ -2172,6 +2173,7 @@
         "tags": ["forest"]
       },
       "Generic": {
+        "releaseDate": "2006-05-21",
         "sprites": ["i2esQ"]
       },
       "Jungle": {
