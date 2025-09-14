@@ -1306,7 +1306,7 @@
     "genderOnly": false,
     "releaseDate": "2025-07-27",
     "sprites": ["HeVJe"],
-    "tags": ["standard","amphiptere","lightning","coast"]
+    "tags": ["standard","amphiptere","lightning","coast","regular"]
   },
   "Mistlet Pygmy": {
     "dimorphism": true,
