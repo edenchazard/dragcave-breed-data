@@ -25,7 +25,6 @@
     },
     "tags": ["standard","wyrm","water","cave","halloween"]
   },
-  {
   "Moonblight": {
     "dimorphism": true,
     "genderOnly": false,
@@ -70,8 +69,7 @@
         ]
       }
     }
-  }
-},
+  },
   "Aegis": {
     "dimorphism": false,
     "genderOnly": "m",
