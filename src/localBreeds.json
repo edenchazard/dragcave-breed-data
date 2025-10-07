@@ -5,7 +5,7 @@
     "releaseDate": "2025-04-27",
     "sprites": ["Er1nd","CA3ox"],
     "tags": ["drake","earth","desert","regular"]
-  }, 
+  },
   "Abyss Watcher": {
     "dimorphism": true,
     "genderOnly": false,
@@ -24,51 +24,6 @@
       }
     },
     "tags": ["standard","wyrm","water","cave","halloween"]
-  },
-  "Moonblight": {
-    "dimorphism": true,
-    "genderOnly": false,
-    "releaseDate": "2025-09-28",
-    "tags": [
-      "regular",
-      "Has BSA",
-      "alpine",
-      "forest"
-    ],
-    "subentries": {
-      "Cursed Standard": {
-        "sprites": [
-          "R2uuo"
-        ],
-        "tags": [
-          "Standard"
-        ]
-      },
-      "Cursed Two-headed": {
-        "sprites": [
-          "X4ory"
-        ],
-        "tags": [
-          "two-head"
-        ]
-      },
-      "Cursed Drake": {
-        "sprites": [
-          "BH8IV"
-        ],
-        "tags": [
-          "drake"
-        ]
-      },
-      "Cursed Pygmy": {
-        "sprites": [
-          "ap2Ye"
-        ],
-        "tags": [
-          "pygmy"
-        ]
-      }
-    }
   },
   "Aegis": {
     "dimorphism": false,
@@ -1392,6 +1347,30 @@
     "releaseDate": "2016-09-25",
     "sprites": ["bfgVY","R5EQj"],
     "tags": ["standard","western","earth","desert","forest","jungle","regular"]
+  },
+  "Moonblight": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2025-09-28",
+    "subentries": {
+      "Cursed Drake": {
+        "sprites": ["BH8IV"],
+        "tags": ["drake"]
+      },
+      "Cursed Pygmy": {
+        "sprites": ["ap2Ye"],
+        "tags": ["pygmy"]
+      },
+      "Cursed Standard": {
+        "sprites": ["R2uuo"],
+        "tags": ["Standard"]
+      },
+      "Cursed Two-headed": {
+        "sprites": ["X4ory"],
+        "tags": ["two-head"]
+      }
+    },
+    "tags": ["regular","Has BSA","alpine","forest"]
   },
   "Morphodrake": {
     "dimorphism": false,
