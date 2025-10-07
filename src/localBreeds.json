@@ -25,6 +25,53 @@
     },
     "tags": ["standard","wyrm","water","cave","halloween"]
   },
+  {
+  "Moonblight": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2025-09-28",
+    "tags": [
+      "regular",
+      "Has BSA",
+      "alpine",
+      "forest"
+    ],
+    "subentries": {
+      "Cursed Standard": {
+        "sprites": [
+          "R2uuo"
+        ],
+        "tags": [
+          "Standard"
+        ]
+      },
+      "Cursed Two-headed": {
+        "sprites": [
+          "X4ory"
+        ],
+        "tags": [
+          "two-head"
+        ]
+      },
+      "Cursed Drake": {
+        "sprites": [
+          "BH8IV"
+        ],
+        "tags": [
+          "drake"
+        ]
+      },
+      "Cursed Pygmy": {
+        "sprites": [
+          "ap2Ye"
+        ],
+        "tags": [
+          "pygmy"
+        ]
+      }
+    }
+  }
+},
   "Aegis": {
     "dimorphism": false,
     "genderOnly": "m",
