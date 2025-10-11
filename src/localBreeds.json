@@ -1348,6 +1348,46 @@
     "sprites": ["bfgVY","R5EQj"],
     "tags": ["standard","western","earth","desert","forest","jungle","regular"]
   },
+  "Moonblight": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-09-28",
+    "subentries": {
+      "Cursed Drake": {
+        "sprites": ["BH8IV"],
+        "tags": ["drake","Has BSA"]
+      },
+      "Cursed Pygmy": {
+        "sprites": ["ap2Ye"],
+        "tags": ["pygmy","Has BSA"]
+      },
+      "Cursed Standard": {
+        "sprites": ["R2uuo"],
+        "tags": ["standard","Has BSA"]
+      },
+      "Cursed Two-headed": {
+        "sprites": ["X4ory"],
+        "tags": ["two-head","Has BSA"]
+      },
+      "Regular Drake": {
+        "sprites": ["gPgsq"],
+        "tags": ["drake"]
+      },
+      "Regular Pygmy": {
+        "sprites": ["cTSFk"],
+        "tags": ["pygmy"]
+      },
+      "Regular Standard": {
+        "sprites": ["pfCpO"],
+        "tags": ["standard","alpine","forest"]
+      },
+      "Regular Two-headed": {
+        "sprites": ["3u3O7"],
+        "tags": ["two-head"]
+      }
+    },
+    "tags": ["regular"]
+  },
   "Morphodrake": {
     "dimorphism": false,
     "genderOnly": false,
