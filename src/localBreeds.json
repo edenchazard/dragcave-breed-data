@@ -905,6 +905,13 @@
     "sprites": ["k3PF"],
     "tags": ["standard","western","neutral","cave","regular","summonable","CB-only"]
   },
+  "Gummy Wyrm": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2024-10-31",
+    "sprites": ["Mssng","Puzzl"],
+    "tags": ["pygmy","wyrm","cave","halloween"]
+  },
   "Harkfrost": {
     "dimorphism": false,
     "genderOnly": "m",
