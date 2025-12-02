@@ -909,8 +909,16 @@
     "dimorphism": true,
     "genderOnly": false,
     "releaseDate": "2025-10-31",
-    "sprites": ["Mssng","Puzzl"],
-    "tags": ["pygmy","wyrm","cave","halloween"]
+    "subentries": {
+      "Salt TCA": {
+        "sprites": ["Daath","TANGO"],
+        "tags": ["salt"]
+      },
+      "__regular__": {
+        "sprites": ["Mssng","Puzzl"]
+      }
+    },
+    "tags": ["pygmy","wyrm","cave","halloween","p:life","s:earth"]
   },
   "Harkfrost": {
     "dimorphism": false,
