@@ -25,6 +25,13 @@
     },
     "tags": ["standard","wyrm","water","cave","halloween"]
   },
+  "Cardinal": {
+    "dimorphism": false,
+    "genderOnly": "f",
+    "releaseDate": "2025-12-25",
+    "sprites": ["HomFr"],
+    "tags": ["standard","cave","christmas"]
+  },
   "Aegis": {
     "dimorphism": false,
     "genderOnly": "m",
