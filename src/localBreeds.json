@@ -403,8 +403,20 @@
     "dimorphism": false,
     "genderOnly": "f",
     "releaseDate": "2025-12-25",
-    "sprites": ["HomFr"],
-    "tags": ["standard","cave","christmas"]
+    "sprites": {
+      "Salt Adrak": {
+        "sprites": ["X1qk3"],
+        "tags": ["Fgx67"]
+      },
+      "Salt birdzgoboom": {
+        "sprites": ["GOTEM"],
+        "tags": ["salt"]
+      },
+      "__regular__": {
+        "sprites": ["HomFr"]
+      }
+    },
+    "tags": ["p:water","s:ice","leviathan","standard","cave","christmas"]
   },
   "Carmine Wyvern": {
     "dimorphism": false,
