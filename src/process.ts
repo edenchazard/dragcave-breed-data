@@ -31,19 +31,22 @@ import {
   type FallbackBreedsJSON,
 } from './fallbackHandling.ts';
 
+import { default as fallbackJSON } from './fallbackBreeds.json' with { type: 'json' };
+
+import { default as localJSON } from './localBreeds.json' with { type: 'json' };
+
 import type { BreedEntry } from './types.ts';
 
 const { __dirname } = getFileAndDirName();
-
-let fallbackJSON: FallbackBreedsJSON = {};
-let localJSON: LocalBreedsJSON = {};
 
 function getBreedsTable() {
   // check for duplicate breed name keys in both sets, and warn
   // if they exist.
   const mapNames = (breed: BreedEntry) => breed.name;
-  const fallbacks = fallbackBreedTable(fallbackJSON);
-  const locals = localBreedTable(localJSON);
+  const fallbacks = fallbackBreedTable(
+    fallbackJSON as unknown as FallbackBreedsJSON,
+  );
+  const locals = localBreedTable(localJSON as unknown as LocalBreedsJSON);
   const fallbackNames = fallbacks.map(mapNames);
   const localNames = locals.map(mapNames);
   const uniqueNames = new Set([...fallbackNames, ...localNames]);
@@ -75,11 +78,6 @@ async function prettyPrintFiles() {
     prettyPrintJSONFile(__dirname + '/localBreeds.json'),
     prettyPrintJSONFile(__dirname + '/fallbackBreeds.json'),
   ]);
-
-  fallbackJSON = (await import('./fallbackBreeds.json'))
-    .default as unknown as FallbackBreedsJSON;
-  localJSON = (await import('./localBreeds.json'))
-    .default as unknown as LocalBreedsJSON;
 }
 
 async function main() {
@@ -102,7 +100,11 @@ async function main() {
   await Promise.all(Object.values(caches).map((cache) => cache.tryAccess()));
 
   // 36 x 48
-  await checkCache(localJSON, caches.cache36, ignoreFile);
+  await checkCache(
+    localJSON as unknown as LocalBreedsJSON,
+    caches.cache36,
+    ignoreFile,
+  );
 
   await saveResolutionStylesheet({
     locTiles: caches.cache36.settings.folder,
@@ -112,7 +114,11 @@ async function main() {
   });
 
   // 72 x 96 high dpi
-  await checkCache(localJSON, caches.cache72, ignoreFile);
+  await checkCache(
+    localJSON as unknown as LocalBreedsJSON,
+    caches.cache72,
+    ignoreFile,
+  );
 
   await saveResolutionStylesheet({
     locTiles: caches.cache72.settings.folder,
@@ -135,7 +141,7 @@ async function main() {
   // make and save the fallbacks stylesheet
   await fs.writeFile(
     './output/tile-rendering/fallbacks.css',
-    makeCSSStyleSheet(fallbackJSON),
+    makeCSSStyleSheet(fallbackJSON as unknown as FallbackBreedsJSON),
     'utf8',
   );
   console.log('Saved fallbacks css.');

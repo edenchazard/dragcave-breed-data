@@ -5,7 +5,7 @@ import {
   type DragonGender,
   type NewTag,
   tags,
-} from './types';
+} from './types.ts';
 
 type EntryName = string;
 
