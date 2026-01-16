@@ -403,10 +403,10 @@
     "dimorphism": false,
     "genderOnly": "f",
     "releaseDate": "2025-12-25",
-    "sprites": {
+    "subentries": {
       "Salt Adrak": {
-        "sprites": ["X1qk3"],
-        "tags": ["Fgx67"]
+        "sprites": ["Fgx67"],
+        "tags": ["salt"]
       },
       "Salt birdzgoboom": {
         "sprites": ["GOTEM"],
