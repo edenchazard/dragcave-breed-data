@@ -1,4 +1,10 @@
 {
+  "Melopoeia": {
+    "genderOnly": "m",
+    "releaseDate": "2026-02-14",
+    "sprites": ["SingA",0,-1,48],
+    "tags": ["standard","cave","valentine"]
+  },
   "Albino": {
     "genderOnly": false,
     "releaseDate": "2009-07-15",
