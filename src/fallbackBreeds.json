@@ -453,6 +453,12 @@
     "sprites": ["ja4AL",0,-1,48,"0GCyQ",-22,-1,48],
     "tags": ["standard","eastern","earth","forest","regular"]
   },
+  "Melopoeia": {
+    "genderOnly": "m",
+    "releaseDate": "2026-02-14",
+    "sprites": ["SingA",0,-1,48],
+    "tags": ["standard","cave","valentine"]
+  },
   "Mirisia Amphiptere": {
     "genderOnly": false,
     "releaseDate": "2021-09-26",
