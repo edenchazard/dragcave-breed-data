@@ -399,6 +399,25 @@
     },
     "tags": ["standard","wyvern","p:water","s:magi","coast","jungle","volcano","regular"]
   },
+  "Cardinal": {
+    "dimorphism": false,
+    "genderOnly": "f",
+    "releaseDate": "2025-12-25",
+    "subentries": {
+      "Salt Adrak": {
+        "sprites": ["Fgx67"],
+        "tags": ["salt"]
+      },
+      "Salt birdzgoboom": {
+        "sprites": ["GOTEM"],
+        "tags": ["salt"]
+      },
+      "__regular__": {
+        "sprites": ["HomFr"]
+      }
+    },
+    "tags": ["p:water","s:ice","leviathan","standard","cave","christmas"]
+  },
   "Carmine Wyvern": {
     "dimorphism": false,
     "genderOnly": false,
@@ -905,6 +924,21 @@
     "sprites": ["k3PF"],
     "tags": ["standard","western","neutral","cave","regular","summonable","CB-only"]
   },
+  "Gummy Wyrm": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2025-10-31",
+    "subentries": {
+      "Salt TCA": {
+        "sprites": ["Daath","TANGO"],
+        "tags": ["salt"]
+      },
+      "__regular__": {
+        "sprites": ["Mssng","Puzzl"]
+      }
+    },
+    "tags": ["pygmy","wyrm","cave","halloween","p:life","s:earth"]
+  },
   "Harkfrost": {
     "dimorphism": false,
     "genderOnly": "m",
@@ -1347,6 +1381,46 @@
     "releaseDate": "2016-09-25",
     "sprites": ["bfgVY","R5EQj"],
     "tags": ["standard","western","earth","desert","forest","jungle","regular"]
+  },
+  "Moonblight": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2025-09-28",
+    "subentries": {
+      "Cursed Drake": {
+        "sprites": ["BH8IV"],
+        "tags": ["drake","Has BSA"]
+      },
+      "Cursed Pygmy": {
+        "sprites": ["ap2Ye"],
+        "tags": ["pygmy","Has BSA"]
+      },
+      "Cursed Standard": {
+        "sprites": ["R2uuo"],
+        "tags": ["standard","Has BSA"]
+      },
+      "Cursed Two-headed": {
+        "sprites": ["X4ory"],
+        "tags": ["two-head","Has BSA"]
+      },
+      "Regular Drake": {
+        "sprites": ["gPgsq"],
+        "tags": ["drake"]
+      },
+      "Regular Pygmy": {
+        "sprites": ["cTSFk"],
+        "tags": ["pygmy"]
+      },
+      "Regular Standard": {
+        "sprites": ["pfCpO"],
+        "tags": ["standard","alpine","forest"]
+      },
+      "Regular Two-headed": {
+        "sprites": ["3u3O7"],
+        "tags": ["two-head"]
+      }
+    },
+    "tags": ["regular"]
   },
   "Morphodrake": {
     "dimorphism": false,
