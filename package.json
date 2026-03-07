@@ -7,7 +7,7 @@
     "url": "git+https://github.com/edenchazard/dragcave-breed-data.git"
   },
   "dependencies": {
-    "node-html-parser": "^7.0.1",
+    "node-html-parser": "^7.1.0",
     "ofetch": "^1.4.1",
     "sharp": "^0.34.4",
     "typescript": "^5.8.3"
