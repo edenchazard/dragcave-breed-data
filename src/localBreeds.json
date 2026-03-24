@@ -2155,6 +2155,28 @@
     "sprites": ["8Dspi"],
     "tags": ["standard","western","fire","desert","regular"]
   },
+  "Sweetling": {
+    "dimorphism": false,
+    "genderOnly": "m",
+    "releaseDate": "2010-02-14",
+    "subentries": {
+      "Black": {
+        "sprites": ["qZgqQ"]
+      },
+      "Pink": {
+        "sprites": ["voFHL"]
+      },
+      "Salt Kila": {
+        "sprites": ["ZV1o"],
+        "tags": ["salt"]
+      },
+      "Salt Nepherim": {
+        "sprites": ["MpjG"],
+        "tags": ["salt"]
+      }
+    },
+    "tags": ["standard","wingless","neutral","cave","valentine"]
+  },
   "Tangledrakin": {
     "dimorphism": false,
     "genderOnly": false,
