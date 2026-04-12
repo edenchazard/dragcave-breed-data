@@ -2557,35 +2557,6 @@
       "regular"
     ]
   },
-  "Sweetling": {
-    "genderOnly": "m",
-    "releaseDate": "2010-02-14",
-    "subentries": {
-      "Black": {
-        "sprites": [
-          "qZgqQ",
-          0,
-          -1,
-          48
-        ]
-      },
-      "Pink": {
-        "sprites": [
-          "voFHL",
-          0,
-          -1,
-          48
-        ]
-      }
-    },
-    "tags": [
-      "standard",
-      "wingless",
-      "neutral",
-      "cave",
-      "valentine"
-    ]
-  },
   "Tercorn": {
     "genderOnly": false,
     "releaseDate": "2019-09-01",
