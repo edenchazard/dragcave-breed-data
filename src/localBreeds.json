@@ -1577,9 +1577,13 @@
     "dimorphism": false,
     "genderOnly": false,
     "releaseDate": "2026-03-29",
-    "sprites": {
-      "Blue": ["U9RYf"],
-      "Gold": ["bYPkd"]
+    "subentries": {
+      "Blue": {
+        "sprites": ["U9RYf"]
+      },
+      "Gold": {
+        "sprites": ["bYPkd"]
+      }
     },
     "tags": ["pygmy","western","light","regular","alpine","desert"]
   },
