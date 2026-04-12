@@ -2213,7 +2213,7 @@
     "dimorphism": false,
     "genderOnly": false,
     "releaseDate": "2026-03-29",
-    "spirtes": {
+    "sprites": {
       "Blue": [
         "U9RYf"
       ],
@@ -4423,21 +4423,39 @@
     "releaseDate": "2010-02-14",
     "subentries": {
       "Black": {
-        "sprites": ["qZgqQ"]
+        "sprites": [
+          "qZgqQ"
+        ]
       },
       "Pink": {
-        "sprites": ["voFHL"]
+        "sprites": [
+          "voFHL"
+        ]
       },
       "Salt Kila": {
-        "sprites": ["ZV1o"],
-        "tags": ["salt"]
+        "sprites": [
+          "ZV1o"
+        ],
+        "tags": [
+          "salt"
+        ]
       },
       "Salt Nepherim": {
-        "sprites": ["MpjG"],
-        "tags": ["salt"]
+        "sprites": [
+          "MpjG"
+        ],
+        "tags": [
+          "salt"
+        ]
       }
     },
-    "tags": ["standard","wingless","neutral","cave","valentine"]
+    "tags": [
+      "standard",
+      "wingless",
+      "neutral",
+      "cave",
+      "valentine"
+    ]
   },
   "Tangledrakin": {
     "dimorphism": false,
