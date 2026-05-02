@@ -1,0 +1,83 @@
+name: Publish output to dc-lineage-builder [bot]
+
+on:
+  workflow_run:
+    workflows:
+      - Tests
+    branches:
+      - main
+    types:
+      - completed
+
+jobs:
+  publish-output:
+    if: ${{ github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main' }}
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout source repository
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          path: source
+          fetch-depth: 2
+
+      - name: Check for output changes
+        id: output-changes
+        working-directory: source
+        run: |
+          changed_files=""
+
+          if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+            changed_files="$(git diff --name-only HEAD^ HEAD -- output)"
+          else
+            changed_files="$(git ls-files output)"
+          fi
+
+          if [ -n "$changed_files" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Checkout dc-lineage-builder
+        if: steps.output-changes.outputs.changed == 'true'
+        uses: actions/checkout@v6
+        with:
+          repository: edenchazard/dc-lineage-builder
+          ref: main
+          token: ${{ secrets.PAT }}
+          fetch-depth: 0
+
+      - name: Sync generated output
+        if: steps.output-changes.outputs.changed == 'true'
+        run: |
+          mkdir -p app/shared
+          mkdir -p app/assets/tile-rendering
+
+          cp source/output/breed-definitions.ts app/shared/breed-definitions.ts
+          cp source/output/tile-rendering/*.css app/assets/tile-rendering/
+
+      - name: Create pull request
+        if: steps.output-changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.PAT }}
+          base: main
+          branch: import-breed-data-${{ github.event.workflow_run.head_sha }}
+          commit-message: |-
+            (chore) import and commit breed data
+
+            Source: https://github.com/edenchazard/dragcave-breed-data/commit/${{ github.event.workflow_run.head_sha }}
+          title: |-
+            (chore) import and commit breed data
+          body: |-
+            Source: https://github.com/edenchazard/dragcave-breed-data/commit/${{ github.event.workflow_run.head_sha }}
+          add-paths: |
+            app/shared/breed-definitions.ts
+            app/assets/tile-rendering/*.css
+          delete-branch: true
