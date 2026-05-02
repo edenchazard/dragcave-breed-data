@@ -52,10 +52,14 @@ jobs:
           ref: main
           token: ${{ secrets.PAT }}
           fetch-depth: 0
+          clean: false
 
       - name: Sync generated output
         if: steps.output-changes.outputs.changed == 'true'
         run: |
+          test -f source/output/breed-definitions.ts
+          test -d source/output/tile-rendering
+
           mkdir -p app/shared
           mkdir -p app/assets/tile-rendering
 
