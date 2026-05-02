@@ -939,6 +939,20 @@
     },
     "tags": ["pygmy","wyrm","cave","halloween","p:life","s:earth"]
   },
+  "Haimatos": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-04-26",
+    "subentries": {
+      "Erythro": {
+        "sprites": ["3Resc"]
+      },
+      "Leuco": {
+        "sprites": ["WK34W"]
+      }
+    },
+    "tags": ["standard","coast","forest","regular"]
+  },
   "Harkfrost": {
     "dimorphism": false,
     "genderOnly": "m",
@@ -1659,6 +1673,13 @@
     "sprites": ["7bzCd","lEpYM"],
     "tags": ["standard","western","earth","forest","jungle","regular"]
   },
+  "Prismanic Amphiptere": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-04-26",
+    "sprites": ["YdfA0"],
+    "tags": ["standard","amphiptere","volcano","regular"]
+  },
   "Pryanost Lindwyrm": {
     "dimorphism": false,
     "genderOnly": "f",
@@ -1739,6 +1760,9 @@
       },
       "Purple": {
         "sprites": ["X6kh6"]
+      },
+      "Rainbow": {
+        "sprites": ["10t9T"]
       }
     },
     "tags": ["standard","wyvern","fire","volcano","regular"]
