@@ -5563,13 +5563,27 @@
     "dimorphism": false,
     "genderOnly": "m",
     "releaseDate": "2026-02-14",
-    "sprites": {
-      "Salt Infinis": "6zEus",
-      "Salt Wheeloftime13": "gUStt"
-    },
-    "tags": [
-      "standard",
-      "valentine"
-    ]
+    "subentries": {
+      "Salt Infinis": {
+        "sprites": [
+          "6zEus"
+        ],
+        "tags": [
+          "salt"
+        ]
+      },
+      "Salt Wheeloftime13": {
+        "sprites": [
+          "gUStt"
+        ],
+        "tags": [
+          "salt"
+        ]
+      },
+      "tags": [
+        "standard",
+        "valentine"
+      ]
+    }
   }
 }
