@@ -1363,6 +1363,22 @@
     "sprites": ["Iac9u"],
     "tags": ["standard","eastern","p:life","s:water","coast","regular"]
   },
+  "Melopoeia": {
+    "dimorphism": false,
+    "genderOnly": "m",
+    "releaseDate": "2026-02-14",
+    "subentries": {
+      "Salt Infinis": {
+        "sprites": ["6zEus"],
+        "tags": ["salt"]
+      },
+      "Salt Wheeloftime13": {
+        "sprites": ["gUStt"],
+        "tags": ["salt"]
+      }
+    },
+    "tags": ["standard","valentine"]
+  },
   "Mimic Pygmy": {
     "dimorphism": true,
     "genderOnly": false,
