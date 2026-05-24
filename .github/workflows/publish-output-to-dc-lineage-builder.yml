@@ -44,6 +44,15 @@ jobs:
             echo "changed=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Snapshot generated output
+        if: steps.output-changes.outputs.changed == 'true'
+        run: |
+          snapshot_dir="$RUNNER_TEMP/dc-lineage-builder-output"
+          rm -rf "$snapshot_dir"
+          mkdir -p "$snapshot_dir"
+
+          cp -R source/output/. "$snapshot_dir/"
+
       - name: Checkout dc-lineage-builder
         if: steps.output-changes.outputs.changed == 'true'
         uses: actions/checkout@v6
@@ -57,14 +66,16 @@ jobs:
       - name: Sync generated output
         if: steps.output-changes.outputs.changed == 'true'
         run: |
-          test -f source/output/breed-definitions.ts
-          test -d source/output/tile-rendering
+          snapshot_dir="$RUNNER_TEMP/dc-lineage-builder-output"
+
+          test -f "$snapshot_dir/breed-definitions.ts"
+          test -d "$snapshot_dir/tile-rendering"
 
           mkdir -p app/shared
           mkdir -p app/assets/tile-rendering
 
-          cp source/output/breed-definitions.ts app/shared/breed-definitions.ts
-          cp source/output/tile-rendering/*.css app/assets/tile-rendering/
+          cp "$snapshot_dir/breed-definitions.ts" app/shared/breed-definitions.ts
+          cp "$snapshot_dir/tile-rendering"/*.css app/assets/tile-rendering/
 
       - name: Create pull request
         if: steps.output-changes.outputs.changed == 'true'
