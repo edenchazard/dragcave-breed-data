@@ -5563,6 +5563,10 @@
     "dimorphism": false,
     "genderOnly": "m",
     "releaseDate": "2026-02-14",
+    "tags": [
+      "standard",
+      "valentine"
+    ],
     "subentries": {
       "Salt Infinis": {
         "sprites": [
@@ -5580,10 +5584,6 @@
           "salt"
         ]
       },
-      "tags": [
-        "standard",
-        "valentine"
-      ]
     }
   }
 }
