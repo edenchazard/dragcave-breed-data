@@ -390,6 +390,12 @@
     "sprites": ["DJuWf",-8,-1,48],
     "tags": ["standard","western","ice","alpine","regular","Has BSA"]
   },
+  "Ignimbri": {
+    "genderOnly": false,
+    "releaseDate": "2026-05-21",
+    "sprites": ["IvLCF",-15,-1,48],
+    "tags": ["standard","regular"]
+  },
   "Imperial Fleshcrowne": {
     "genderOnly": false,
     "releaseDate": "2013-07-07",

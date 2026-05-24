@@ -204,6 +204,27 @@
     "sprites": ["jFX3Q"],
     "tags": ["standard","wingless","earth","forest","volcano","regular"]
   },
+  "Aspect of Form": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-05-21",
+    "sprites": ["2iXB8"],
+    "tags": ["standard","regular"]
+  },
+  "Aspect of Mana": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-05-21",
+    "sprites": ["Yi2ug"],
+    "tags": ["standard","regular"]
+  },
+  "Aspect of Soul": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-05-21",
+    "sprites": ["M4Hdq"],
+    "tags": ["standard","regular"]
+  },
   "Astrael": {
     "dimorphism": false,
     "genderOnly": false,
@@ -1211,6 +1232,13 @@
     "sprites": ["v82SU"],
     "tags": ["pygmy","eastern","earth","all","regular"]
   },
+  "Kymatumi": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-05-21",
+    "sprites": ["SpaBq"],
+    "tags": ["standard","desert","forest","regular"]
+  },
   "Labradorite": {
     "dimorphism": true,
     "genderOnly": false,
@@ -2146,6 +2174,13 @@
     "sprites": ["ZQDEZ","ne5L"],
     "tags": ["standard","western","air","all","regular"]
   },
+  "Stormherald": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-05-21",
+    "sprites": ["j78Zl"],
+    "tags": ["standard","regular","alpine","forest"]
+  },
   "Stratos": {
     "dimorphism": false,
     "genderOnly": false,
@@ -2475,6 +2510,13 @@
     "releaseDate": "2019-05-21",
     "sprites": ["hdhTm"],
     "tags": ["drake","time","forest","regular"]
+  },
+  "Warden of Realms": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-05-21",
+    "sprites": ["aaD3z"],
+    "tags": ["standard","regular"]
   },
   "Water": {
     "dimorphism": true,
