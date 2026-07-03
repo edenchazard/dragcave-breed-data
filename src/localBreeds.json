@@ -1,11 +1,4 @@
 {
-  "Slag-Tail Behemoth": {
-    "dimorphism": true,
-    "genderOnly": false,
-    "releaseDate": "2025-06-28",
-    "sprites": ["6P9uV","52ZQB"],
-    "tags": ["standard","volcano","regular"]
-  },
   "Aardrake": {
     "dimorphism": true,
     "genderOnly": false,
@@ -2084,6 +2077,13 @@
     "releaseDate": "2020-08-23",
     "sprites": ["MJqMB","J0j9v"],
     "tags": ["standard","amphiptere","air","alpine","coast","forest","regular"]
+  },
+  "Slag-Tail Behemoth": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2025-06-28",
+    "sprites": ["6P9uV","52ZQB"],
+    "tags": ["standard","volcano","regular"]
   },
   "Snow": {
     "dimorphism": false,

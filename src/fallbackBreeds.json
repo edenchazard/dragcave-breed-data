@@ -1,11 +1,4 @@
 {
-  "Avarice": {
-    "dimorphism": true,
-    "genderOnly": false,
-    "releaseDate": "2025-06-28",
-    "sprites": ["jC1in",-11,-1,48,"pWWBT",0,-1,48],
-    "tags": ["standard","alpine","desert","regular"]
-  },
   "Albino": {
     "genderOnly": false,
     "releaseDate": "2009-07-15",
@@ -47,6 +40,13 @@
     "releaseDate": "2022-05-21",
     "sprites": ["EKXWG",-18,-1,48],
     "tags": ["standard","western","p:life","s:light","forest","regular","Has BSA"]
+  },
+  "Avarice": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2025-06-28",
+    "sprites": ["jC1in",-11,-1,48,"pWWBT",0,-1,48],
+    "tags": ["standard","alpine","desert","regular"]
   },
   "Azure Glacewing": {
     "genderOnly": false,
