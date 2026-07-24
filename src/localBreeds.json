@@ -1617,6 +1617,13 @@
     },
     "tags": ["standard","wyrm","p:fire","s:dark","cave","halloween"]
   },
+  "Ovidrake": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2026-07-19",
+    "sprites": ["joqIC","gNvx3"],
+    "tags": ["drake","alpine","forest","desert","volcano","coast","jungle","regular"]
+  },
   "Painted Ray Pygmy": {
     "dimorphism": true,
     "genderOnly": false,

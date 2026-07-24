@@ -409,6 +409,12 @@
     "sprites": ["jeuAc",0,-1,48,"onrpD",-23,-1,48],
     "tags": ["standard","western","neutral","all","regular"]
   },
+  "Kintsugi": {
+    "genderOnly": false,
+    "releaseDate": "2026-07-19",
+    "sprites": ["XGIUr",-15,-1,48,"u6lX2",0,-1,48],
+    "tags": ["standard","alpine","forest","desert","volcano","coast","jungle","regular"]
+  },
   "Kovos Pygmy": {
     "genderOnly": false,
     "releaseDate": "2019-05-21",
