@@ -29,12 +29,6 @@
     "sprites": ["zloJJ",-12,0,48,"u6lX2",-12,0,48],
     "tags": ["standard","wyvern","air","regular","forest"]
   },
-  "Kintsugi": {
-    "genderOnly": false,
-    "releaseDate": "2026-07-19",
-    "sprites": ["XGIUr",-15,-1,48,"u6lX2",0,-1,48],
-    "tags": ["standard","alpine","forest","desert","volcano", "coast", "jungle", "regular"]
-  },
   "Astaarus": {
     "genderOnly": false,
     "releaseDate": "2020-08-23",
@@ -414,6 +408,12 @@
     "releaseDate": "2013-07-07",
     "sprites": ["jeuAc",0,-1,48,"onrpD",-23,-1,48],
     "tags": ["standard","western","neutral","all","regular"]
+  },
+  "Kintsugi": {
+    "genderOnly": false,
+    "releaseDate": "2026-07-19",
+    "sprites": ["XGIUr",-15,-1,48,"u6lX2",0,-1,48],
+    "tags": ["standard","alpine","forest","desert","volcano","coast","jungle","regular"]
   },
   "Kovos Pygmy": {
     "genderOnly": false,
