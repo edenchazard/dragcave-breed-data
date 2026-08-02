@@ -17,7 +17,7 @@
     "@types/bun": "latest",
     "eslint": "^10.8.0",
     "eslint-config-prettier": "^10.1.5",
-    "prettier": "^3.8.1",
+    "prettier": "^3.9.6",
     "typescript-eslint": "^8.65.0"
   },
   "bugs": {
