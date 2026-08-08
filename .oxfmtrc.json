@@ -12,6 +12,6 @@
     "output",
     "src/localBreeds.json",
     "src/fallbackBreeds.json",
-    "package.json",
+    "package.json"
   ]
 }

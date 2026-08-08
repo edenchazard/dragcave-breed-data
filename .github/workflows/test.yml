@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run prettier checks
+      - name: Run formatting checks
         run: npm run fmt:check
 
       - name: Run linting
