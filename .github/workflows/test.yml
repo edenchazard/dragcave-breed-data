@@ -17,22 +17,19 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+      - name: Setup Node
+        uses: actions/setup-node@v7
         with:
-          bun-version: latest
+          node-version-file: .node-version
 
-      - name: Install bun dependencies
-        run: bun install
+      - name: Install dependencies
+        run: npm install
 
       - name: Run prettier checks
-        run: bun run fmt:check
+        run: npm run fmt:check
 
       - name: Run linting
-        run: bun run lint
+        run: npm run lint
 
       - name: Run typescript checks
-        run: bun run ts:check
-
-      - name: Run schema validation
-        run: echo "TODO"
+        run: npm run ts:check
