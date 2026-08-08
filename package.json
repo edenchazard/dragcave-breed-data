@@ -9,17 +9,13 @@
   "dependencies": {
     "node-html-parser": "^9.0.1",
     "ofetch": "^1.4.1",
-    "sharp": "^0.35.3",
-    "typescript": "^5.8.3"
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.5",
     "@types/node": "^26.2.0",
-    "eslint": "^10.8.0",
-    "eslint-config-prettier": "^10.1.5",
     "oxfmt": "^0.62.0",
-    "prettier": "^3.9.6",
-    "typescript-eslint": "^8.66.0"
+    "oxlint": "^1.77.0",
+    "typescript": "^7.0.2"
   },
   "bugs": {
     "url": "https://github.com/edenchazard/dragcave-breed-data/issues"
@@ -33,7 +29,7 @@
     "download": "src/download.ts",
     "fmt": "oxfmt",
     "fmt:check": "oxfmt --check",
-    "lint": "eslint .",
+    "lint": "oxlint",
     "lint:fix": "npm run lint -- --fix",
     "ts:check": "tsc --noEmit"
   },
