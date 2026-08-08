@@ -31,8 +31,8 @@
   "scripts": {
     "process": "src/process.ts",
     "download": "src/download.ts",
-    "fmt": "prettier --write .",
-    "fmt:check": "prettier . --check",
+    "fmt": "oxfmt",
+    "fmt:check": "oxfmt --check",
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
     "ts:check": "tsc --noEmit"
