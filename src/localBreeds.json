@@ -2092,6 +2092,20 @@
     "sprites": ["6P9uV","52ZQB"],
     "tags": ["standard","volcano","regular"]
   },
+  "Seaweed Drake": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2026-08-30",
+    "sprites": ["1pxuB", "XLdsK"],
+    "tags": ["standard","drake","regular", "coast"]
+  },
+  "Coal Wyrm": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2026-08-30",
+    "sprites": ["UjKFW", "vRcM1"],
+    "tags": ["standard","two-head","regular", "desert","volcano"]
+  },
   "Snow": {
     "dimorphism": false,
     "genderOnly": "m",
