@@ -52,7 +52,7 @@ jobs:
         run: npm install
 
       - name: Run processing script (formatting, cache downloads)
-        run: npm run ./src/process.ts
+        run: npm run process
 
       - name: Commit and push changes from processing script
         uses: stefanzweifel/git-auto-commit-action@v7
