@@ -111,7 +111,6 @@ export function getBreedTable(json: LocalBreedsJSON) {
 
       // Append any subentry tags to the overall breed tags.
       if ((subentry.tags ?? []).length > 0) {
-        console.log(overallBreed.tags);
         entry.metaData.tags = [...overallBreed.tags, ...(subentry.tags ?? [])];
       }
 
