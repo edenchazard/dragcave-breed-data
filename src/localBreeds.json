@@ -503,7 +503,7 @@
     "genderOnly": false,
     "releaseDate": "2026-08-30",
     "sprites": ["UjKFW","vRcM1"],
-    "tags": ["standard","two-head","regular","desert","volcano"]
+    "tags": ["two-head","regular","desert","volcano"]
   },
   "Coral Pygmy Wyvern": {
     "dimorphism": true,
@@ -1984,7 +1984,7 @@
     "genderOnly": false,
     "releaseDate": "2026-08-30",
     "sprites": ["1pxuB","XLdsK"],
-    "tags": ["standard","drake","regular","coast"]
+    "tags": ["drake","regular","coast"]
   },
   "Seawyrm Pygmy": {
     "dimorphism": true,
