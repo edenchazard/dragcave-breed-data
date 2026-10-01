@@ -2106,6 +2106,20 @@
     "sprites": ["6P9uV","52ZQB"],
     "tags": ["standard","volcano","regular"]
   },
+  "Gilgrot": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-09-27",
+    "sprites": ["wfuiy"],
+    "tags": ["standard","regular", "alpine","desert","jungle"]
+  },
+  "Fellwinter": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2026-09-27",
+    "sprites": ["bX3gc", "Qa7eM"],
+    "tags": ["standard","hybrid","regular"]
+  },
   "Snow": {
     "dimorphism": false,
     "genderOnly": "m",
