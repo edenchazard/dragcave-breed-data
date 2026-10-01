@@ -685,6 +685,13 @@
     "sprites": ["FnHwj","1Hyq5"],
     "tags": ["standard","wingless","death","all","regular"]
   },
+  "Fellwinter": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2026-09-27",
+    "sprites": ["bX3gc","Qa7eM"],
+    "tags": ["standard","hybrid","regular"]
+  },
   "Fenghuo Wyrm": {
     "dimorphism": false,
     "genderOnly": "m",
@@ -848,6 +855,13 @@
     "releaseDate": "2013-05-23",
     "sprites": ["ku0VO","oBuNq"],
     "tags": ["two-head","western","volcano","regular"]
+  },
+  "Gilgrot": {
+    "dimorphism": false,
+    "genderOnly": false,
+    "releaseDate": "2026-09-27",
+    "sprites": ["wfuiy"],
+    "tags": ["standard","regular","alpine","desert","jungle"]
   },
   "Glaucus Drake": {
     "dimorphism": true,
@@ -2105,20 +2119,6 @@
     "releaseDate": "2025-06-28",
     "sprites": ["6P9uV","52ZQB"],
     "tags": ["standard","volcano","regular"]
-  },
-  "Gilgrot": {
-    "dimorphism": false,
-    "genderOnly": false,
-    "releaseDate": "2026-09-27",
-    "sprites": ["wfuiy"],
-    "tags": ["standard","regular", "alpine","desert","jungle"]
-  },
-  "Fellwinter": {
-    "dimorphism": true,
-    "genderOnly": false,
-    "releaseDate": "2026-09-27",
-    "sprites": ["bX3gc", "Qa7eM"],
-    "tags": ["standard","hybrid","regular"]
   },
   "Snow": {
     "dimorphism": false,
