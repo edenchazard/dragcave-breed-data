@@ -1370,6 +1370,13 @@
     "sprites": ["hQCUw","xmgmf"],
     "tags": ["pygmy","wyvern","alpine","regular"]
   },
+  "Mandrake": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2026-10-31",
+    "sprites": ["Jstce","Hrmit"],
+    "tags": ["drake","cave","halloween"]
+  },
   "Mariner Pygmy": {
     "dimorphism": false,
     "genderOnly": false,
@@ -2169,6 +2176,13 @@
       }
     },
     "tags": ["standard","amphiptere","p:light","s:dark","all","regular"]
+  },
+  "Soulguide": {
+    "dimorphism": true,
+    "genderOnly": false,
+    "releaseDate": "2026-10-31",
+    "sprites": ["Foool","Jdgmt"],
+    "tags": ["standard","cave","halloween"]
   },
   "Spinel Wyvern": {
     "dimorphism": true,
