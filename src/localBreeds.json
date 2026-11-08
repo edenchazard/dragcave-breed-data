@@ -1374,7 +1374,19 @@
     "dimorphism": true,
     "genderOnly": false,
     "releaseDate": "2026-10-31",
-    "sprites": ["Jstce","Hrmit"],
+    "subentries": {
+      "Salt SkyWolf25": {
+        "sprites": ["skyw","mand"],
+        "tags": ["salt"]
+      },
+      "Salt Spatio": {
+        "sprites": ["spat","spit"],
+        "tags": ["salt"]
+      },
+      "__regular__": {
+        "sprites": ["Jstce","Hrmit"]
+      }
+    },
     "tags": ["drake","cave","halloween"]
   },
   "Mariner Pygmy": {
@@ -2181,7 +2193,15 @@
     "dimorphism": true,
     "genderOnly": false,
     "releaseDate": "2026-10-31",
-    "sprites": ["Foool","Jdgmt"],
+    "subentries": {
+      "Salt Annezor": {
+        "sprites": ["lant","anne"],
+        "tags": ["salt"]
+      },
+      "__regular__": {
+        "sprites": ["Foool","Jdgmt"]
+      }
+    },
     "tags": ["standard","cave","halloween"]
   },
   "Spinel Wyvern": {
