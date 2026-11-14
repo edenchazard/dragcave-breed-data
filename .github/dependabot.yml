@@ -10,6 +10,11 @@ updates:
     labels:
       - dependencies
       - npm
+    groups:
+      oxc:
+        patterns:
+          - oxfmt
+          - oxlint
 
   - package-ecosystem: github-actions
     directory: '/'
